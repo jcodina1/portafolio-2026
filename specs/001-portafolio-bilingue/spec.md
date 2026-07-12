@@ -214,8 +214,9 @@ contenido y conversión.
   Gestionados).
 - **FR-011**: Cada paquete DEBE comunicar el problema de negocio, "qué recibes" (entregables) y
   el "resultado", con un CTA hacia contacto/diagnóstico.
-- **FR-012**: El sitio DEBE ofrecer un gancho de entrada "diagnóstico gratuito" (llamada de 30
-  min) accesible desde las páginas comerciales.
+- **FR-012**: El sitio DEBE ofrecer un gancho de entrada "diagnóstico gratis" (llamada de 30
+  min) accesible desde las páginas comerciales, con la etiqueta de CTA única "Agenda tu diagnóstico
+  gratis".
 - **FR-013**: Los servicios NO muestran precios; el CTA conduce a diagnóstico/presupuesto.
 
 **Contacto (multicanal)**

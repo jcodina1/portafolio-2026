@@ -147,7 +147,7 @@ en ≤2 clics; el perfil comunica rol/stack/experiencia/liderazgo.
 **Independent Test**: abrir `/es/proyectos`, ver los casos ("próximamente" distinguidos), abrir un
 detalle con problema→solución→resultado, stack, capturas y enlaces.
 
-- [ ] T060 [P] [US3] Casos ES en `content/es/proyectos/{windmar-plataforma,simulacion-financiera,web-2-0,este-portafolio}.mdx` (**incluye el propio portafolio** como proyecto personal; puede empezar `coming-soon` y finalizarse en T101)
+- [ ] T060 [P] [US3] Casos ES en `content/es/proyectos/{windmar-plataforma,simulacion-financiera,web-2-0,este-portafolio}.mdx` (**incluye el propio portafolio** como proyecto personal; puede empezar `coming-soon` y finalizarse en T103)
 - [ ] T061 [P] [US3] Stubs EN `content/en/proyectos/{...}.mdx` (TODO traducir)
 - [ ] T062 [P] [US3] `components/projects/ProjectCard.tsx` (glass, slot de imagen `picsum` seed + `alt`, estado "próximamente")
 - [ ] T063 [US3] Índice `app/[locale]/proyectos/page.tsx` (rejilla con ritmo, mismo peso visual) (dep T062, T018)
@@ -229,9 +229,9 @@ redirección; cada familia/proyecto con URL indexable.
 - [ ] T098 Revisión de seguridad (agente security-reviewer): env, anti-spam sin estado, CSP para Calendly, `rel=noopener`, dependencias
 - [ ] T099 [P] Docs: `README.md` + guía de edición de contenido (ref. [contracts/content.md](./contracts/content.md))
 - [ ] T100 Ejecutar validación completa de [quickstart.md](./quickstart.md)
-- [ ] T101 Finalizar el caso `este-portafolio` (capturas reales + narrativa) tras el deploy y marcar `published` (dep T103)
-- [ ] T102 Revisión de código (agente code-reviewer): corregir CRITICAL/HIGH
-- [ ] T103 Config de despliegue en Vercel (env vars, build, cabeceras) + deploy de preview
+- [ ] T101 Revisión de código (agente code-reviewer): corregir CRITICAL/HIGH
+- [ ] T102 Config de despliegue en Vercel (env vars, build, cabeceras) + deploy de preview
+- [ ] T103 Finalizar el caso `este-portafolio` (capturas reales + narrativa) tras el deploy y marcar `published` (dep T102)
 - [ ] T104 Re-validar Constitution Check (v1.2.0, 7 principios) y checklists en verde
 
 ---
