@@ -90,11 +90,13 @@ specs/001-portafolio-bilingue/
 ├── research.md          # Fase 0 (decisiones técnicas)
 ├── data-model.md        # Fase 1 (entidades + esquemas)
 ├── quickstart.md        # Fase 1 (guía de validación)
+├── design-system.md     # Sistema de diseño y UX (destilado de skills de frontend)
 ├── contracts/           # Fase 1 (contratos de interfaz)
 │   ├── contact.md       #   endpoint/acción de contacto
 │   └── content.md       #   contrato de datos de contenido (autores)
 ├── checklists/
-│   └── requirements.md  # calidad de la spec (verde)
+│   ├── requirements.md  # calidad de la spec (verde)
+│   └── ux-design.md     # gate de calidad de diseño/UX
 └── tasks.md             # Fase 2 (/speckit-tasks — NO lo crea /speckit-plan)
 ```
 
