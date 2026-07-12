@@ -19,7 +19,7 @@ trabajar). Arquitectura híbrida: home one-pager premium + páginas dedicadas e 
 Un dueño o responsable de una PYME/SAS llega buscando quién le resuelva un problema operativo
 (procesos manuales repetidos, herramientas desconectadas, una idea de software, o un sitio que
 capte clientes). Reconoce su problema en una de las familias de servicio, entiende qué recibe y
-el resultado, y toma la vía de conversión: idealmente el gancho "diagnóstico gratuito" (agenda
+el resultado, y toma la vía de conversión: idealmente el gancho "diagnóstico gratis" (agenda
 una llamada de 30 min) o el canal que prefiera (formulario, WhatsApp, email, LinkedIn).
 
 **Why this priority**: Es el objetivo comercial y de ingresos. Sin esta ruta el sitio no capta
@@ -34,7 +34,7 @@ formulario) que llega al destino y muestra confirmación.
 1. **Given** un visitante en una página de servicios, **When** revisa un paquete, **Then** ve el
    problema que resuelve, qué recibe, el resultado esperado y un CTA claro hacia el diagnóstico o
    el contacto.
-2. **Given** un visitante que quiere hablar, **When** usa el gancho "diagnóstico gratuito",
+2. **Given** un visitante que quiere hablar, **When** usa el gancho "diagnóstico gratis",
    **Then** puede agendar una llamada de 30 minutos sin fricción.
 3. **Given** un visitante que envía el formulario con datos válidos, **When** lo envía, **Then**
    el mensaje llega al autor y el visitante recibe confirmación visible.
