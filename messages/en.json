@@ -51,6 +51,17 @@
     "experience": "Experience",
     "contactCta": "Let's talk about working together"
   },
+  "projects": {
+    "title": "Projects",
+    "intro": "Real case studies: management platforms, integrations and high-conversion sites.",
+    "role": "Role",
+    "stack": "Stack",
+    "problem": "The challenge",
+    "solution": "The solution",
+    "result": "The result",
+    "visit": "View live",
+    "back": "All projects"
+  },
   "hero": {
     "available": "Available for projects",
     "eyebrow": "Senior Fullstack · Development Lead · Bogotá",

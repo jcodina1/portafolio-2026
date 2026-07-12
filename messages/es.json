@@ -51,6 +51,17 @@
     "experience": "Experiencia",
     "contactCta": "Hablemos de trabajar juntos"
   },
+  "projects": {
+    "title": "Proyectos",
+    "intro": "Casos de trabajo reales: plataformas de gestión, integraciones y sitios de alta conversión.",
+    "role": "Rol",
+    "stack": "Stack",
+    "problem": "El reto",
+    "solution": "La solución",
+    "result": "El resultado",
+    "visit": "Ver en vivo",
+    "back": "Todos los proyectos"
+  },
   "hero": {
     "available": "Disponible para proyectos",
     "eyebrow": "Senior Fullstack · Líder de desarrollo · Bogotá",

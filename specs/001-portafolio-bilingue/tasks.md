@@ -147,12 +147,12 @@ en ≤2 clics; el perfil comunica rol/stack/experiencia/liderazgo.
 **Independent Test**: abrir `/es/proyectos`, ver los casos ("próximamente" distinguidos), abrir un
 detalle con problema→solución→resultado, stack, capturas y enlaces.
 
-- [ ] T060 [P] [US3] Casos ES en `content/es/proyectos/{windmar-plataforma,simulacion-financiera,web-2-0,este-portafolio}.mdx` (**incluye el propio portafolio** como proyecto personal; puede empezar `coming-soon` y finalizarse en T103)
-- [ ] T061 [P] [US3] Stubs EN `content/en/proyectos/{...}.mdx` (TODO traducir)
-- [ ] T062 [P] [US3] `components/projects/ProjectCard.tsx` (glass, slot de imagen `picsum` seed + `alt`, estado "próximamente")
-- [ ] T063 [US3] Índice `app/[locale]/proyectos/page.tsx` (rejilla con ritmo, mismo peso visual) (dep T062, T018)
-- [ ] T064 [US3] Detalle `app/[locale]/proyectos/[slug]/page.tsx` (render MDX, `generateStaticParams`, JSON-LD `CreativeWork`) (dep T019, T022)
-- [ ] T065 [US3] E2E + axe `tests/e2e/us3-proyectos.spec.ts` (listado + detalle + "próximamente") (dep T064)
+- [x] T060 [P] [US3] Casos ES en `content/es/proyectos/{windmar-plataforma,simulacion-financiera,web-2-0,este-portafolio}.mdx` (**incluye el propio portafolio** como proyecto personal; puede empezar `coming-soon` y finalizarse en T103)
+- [x] T061 [P] [US3] Stubs EN `content/en/proyectos/{...}.mdx` (TODO traducir)
+- [x] T062 [P] [US3] `components/projects/ProjectCard.tsx` (glass, slot de imagen `picsum` seed + `alt`, estado "próximamente")
+- [x] T063 [US3] Índice `app/[locale]/proyectos/page.tsx` (rejilla con ritmo, mismo peso visual) (dep T062, T018)
+- [x] T064 [US3] Detalle `app/[locale]/proyectos/[slug]/page.tsx` (render MDX, `generateStaticParams`, JSON-LD `CreativeWork`) (dep T019, T022)
+- [x] T065 [US3] E2E + axe `tests/e2e/us3-proyectos.spec.ts` (listado + detalle + "próximamente") (dep T064)
 
 **Checkpoint**: US1-US3 independientes.
 
