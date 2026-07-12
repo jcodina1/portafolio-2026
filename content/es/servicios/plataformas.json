@@ -1,0 +1,38 @@
+{
+  "id": "plataformas",
+  "slug": "plataformas",
+  "name": "Plataformas y herramientas a medida",
+  "tagline": "El software que tu negocio necesita y que no existe en el mercado.",
+  "packages": [
+    {
+      "id": "mvp-6-semanas",
+      "slug": "mvp-6-semanas",
+      "name": "MVP en 6 semanas",
+      "hook": "De la idea a algo funcionando, rápido.",
+      "problem": "¿Tienes una idea de software para tu negocio pero no sabes por dónde empezar? Construimos la versión mínima que ya resuelve, la pruebas con clientes reales y crecemos desde ahí.",
+      "deliverables": [
+        "El flujo de negocio principal, funcionando",
+        "Base de datos y despliegue listos para usar",
+        "Algo real en tus manos en semanas, no en meses"
+      ],
+      "outcome": "Validas tu idea con inversión controlada y sin apostar todo de golpe.",
+      "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" },
+      "featured": true
+    },
+    {
+      "id": "plataforma-a-medida",
+      "slug": "plataforma-a-medida",
+      "name": "Plataforma a medida",
+      "hook": "El software que tu negocio necesita y no existe en el mercado.",
+      "problem": "Cuando Excel y las herramientas genéricas se quedan cortas, construyo una plataforma pensada para cómo trabajas tú.",
+      "deliverables": [
+        "Sistema completo por fases (gestión, dashboards, integraciones)",
+        "Arquitectura escalable que crece con tu negocio",
+        "Capacitación y documentación para tu equipo"
+      ],
+      "outcome": "Una sola herramienta donde operas todo, con datos ordenados y en tiempo real.",
+      "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
+    }
+  ],
+  "faq": []
+}

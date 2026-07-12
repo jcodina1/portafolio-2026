@@ -1,0 +1,37 @@
+{
+  "id": "soporte",
+  "slug": "soporte",
+  "name": "Soporte continuo",
+  "tagline": "Tu software y tus automatizaciones siempre a punto, sin que te preocupes.",
+  "packages": [
+    {
+      "id": "cuidado",
+      "slug": "cuidado",
+      "name": "Cuidado",
+      "hook": "Tu software siempre funcionando, sin que te preocupes.",
+      "problem": "Yo me encargo de que todo siga rápido, seguro y al día mientras tú te dedicas a tu negocio.",
+      "deliverables": [
+        "Soporte y corrección de errores",
+        "Pequeñas mejoras cada mes",
+        "Monitoreo para adelantarme a los problemas"
+      ],
+      "outcome": "Tranquilidad, sin sorpresas ni caídas.",
+      "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
+    },
+    {
+      "id": "flujos-gestionados",
+      "slug": "flujos-gestionados",
+      "name": "Flujos Gestionados",
+      "hook": "Tus automatizaciones, siempre a punto.",
+      "problem": "Las automatizaciones necesitan mantenimiento cuando tus herramientas cambian. Yo las vigilo y las ajusto por ti.",
+      "deliverables": [
+        "Monitoreo continuo de tus flujos e integraciones",
+        "Ajustes cuando cambian tus herramientas o procesos",
+        "Reporte de qué se está ahorrando tu negocio"
+      ],
+      "outcome": "Todo sigue funcionando solo, mes tras mes.",
+      "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
+    }
+  ],
+  "faq": []
+}

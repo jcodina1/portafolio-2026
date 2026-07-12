@@ -30,5 +30,47 @@
   },
   "home": {
     "wip": "Site under construction."
+  },
+  "services": {
+    "title": "Services",
+    "intro": "I build web products end to end and automate the repetitive work with AI. Pick where to start or book a free diagnosis.",
+    "familiesHeading": "How I can help you",
+    "viewFamily": "View details",
+    "deliverables": "What you get",
+    "outcome": "Outcome",
+    "diagnosisTitle": "Not sure where to start?",
+    "diagnosisBody": "Let's talk for 30 minutes, free and with no commitment. I'll tell you what can be automated, what to build and where to start. Whether or not we work together, you leave with clarity."
+  },
+  "contact": {
+    "title": "Let's talk",
+    "intro": "Tell me what you need and I'll get back to you soon. You can also book a free diagnosis or message me on WhatsApp.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "type": "Reason",
+      "typePlaceholder": "Select a reason",
+      "typeEmpleo": "Job opportunity",
+      "typeServicio": "Service or project",
+      "typeOtro": "Other",
+      "message": "Message",
+      "submit": "Send message",
+      "submitting": "Sending…",
+      "successTitle": "Message sent!",
+      "successBody": "Thank you. I'll reply within 24 hours. If you prefer, book your diagnosis directly.",
+      "errorTitle": "Could not send"
+    },
+    "errors": {
+      "name": "Enter your name (at least 2 characters)",
+      "email": "Enter a valid email",
+      "type": "Select a reason",
+      "message": "Tell me a bit more (at least 10 characters)"
+    },
+    "channels": {
+      "heading": "Other ways to reach me",
+      "whatsapp": "Message me on WhatsApp",
+      "email": "Send an email",
+      "linkedin": "Connect on LinkedIn",
+      "call": "Call"
+    }
   }
 }

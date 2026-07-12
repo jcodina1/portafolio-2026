@@ -1,0 +1,37 @@
+{
+  "id": "sitios",
+  "slug": "sitios",
+  "name": "Sitios y landings que convierten",
+  "tagline": "Presencia web rápida, accesible y pensada para conseguir clientes.",
+  "packages": [
+    {
+      "id": "landing-express",
+      "slug": "landing-express",
+      "name": "Landing Express",
+      "hook": "Una página que trabaja para conseguirte clientes.",
+      "problem": "Perfecta para lanzar un producto, una campaña o captar contactos. Rápida, bonita y pensada para que la gente actúe.",
+      "deliverables": [
+        "Página de alta conversión, lista en pocas semanas",
+        "Optimizada para Google (SEO base) y para cargar rápido",
+        "Formulario y analítica para medir resultados"
+      ],
+      "outcome": "Una presencia que capta contactos desde el primer día.",
+      "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
+    },
+    {
+      "id": "sitio-pro",
+      "slug": "sitio-pro",
+      "name": "Sitio Pro",
+      "hook": "Tu negocio, bien presentado y fácil de encontrar.",
+      "problem": "El sitio completo que transmite confianza, aparece en Google y puedes actualizar tú mismo.",
+      "deliverables": [
+        "Sitio corporativo multipágina, rápido y accesible",
+        "SEO técnico y rendimiento cuidado (Core Web Vitals)",
+        "Gestor de contenido para que edites sin depender de nadie"
+      ],
+      "outcome": "Una web que da confianza, atrae tráfico y convierte visitas en clientes.",
+      "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
+    }
+  ],
+  "faq": []
+}

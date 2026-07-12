@@ -1,0 +1,37 @@
+{
+  "id": "soporte",
+  "slug": "soporte",
+  "name": "Ongoing support",
+  "tagline": "Your software and automations always in good shape, without you worrying.",
+  "packages": [
+    {
+      "id": "cuidado",
+      "slug": "cuidado",
+      "name": "Care",
+      "hook": "Your software always running, without you worrying.",
+      "problem": "I take care of keeping everything fast, secure and up to date while you focus on your business.",
+      "deliverables": [
+        "Support and bug fixing",
+        "Small improvements every month",
+        "Monitoring to get ahead of problems"
+      ],
+      "outcome": "Peace of mind, with no surprises or downtime.",
+      "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
+    },
+    {
+      "id": "flujos-gestionados",
+      "slug": "flujos-gestionados",
+      "name": "Managed Flows",
+      "hook": "Your automations, always in good shape.",
+      "problem": "Automations need maintenance when your tools change. I watch over them and adjust them for you.",
+      "deliverables": [
+        "Continuous monitoring of your flows and integrations",
+        "Adjustments when your tools or processes change",
+        "A report of what your business is saving"
+      ],
+      "outcome": "Everything keeps running on its own, month after month.",
+      "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
+    }
+  ],
+  "faq": []
+}

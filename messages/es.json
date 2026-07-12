@@ -30,5 +30,47 @@
   },
   "home": {
     "wip": "Sitio en construcción."
+  },
+  "services": {
+    "title": "Servicios",
+    "intro": "Construyo productos web de principio a fin y automatizo lo repetitivo con IA. Elige por dónde empezar o agenda un diagnóstico gratis.",
+    "familiesHeading": "Cómo puedo ayudarte",
+    "viewFamily": "Ver detalle",
+    "deliverables": "Qué recibes",
+    "outcome": "Resultado",
+    "diagnosisTitle": "¿No sabes por dónde empezar?",
+    "diagnosisBody": "Hablemos 30 minutos, gratis y sin compromiso. Te digo qué se puede automatizar, qué construir y por dónde empezar. Salgas o no conmigo, te vas con claridad."
+  },
+  "contact": {
+    "title": "Hablemos",
+    "intro": "Cuéntame qué necesitas y te respondo pronto. También puedes agendar un diagnóstico gratis o escribirme por WhatsApp.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo",
+      "type": "Motivo",
+      "typePlaceholder": "Selecciona un motivo",
+      "typeEmpleo": "Oportunidad de empleo",
+      "typeServicio": "Servicio o proyecto",
+      "typeOtro": "Otro",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando…",
+      "successTitle": "¡Mensaje enviado!",
+      "successBody": "Gracias. Te respondo en menos de 24 horas. Si prefieres, agenda directamente tu diagnóstico.",
+      "errorTitle": "No se pudo enviar"
+    },
+    "errors": {
+      "name": "Ingresa tu nombre (mínimo 2 caracteres)",
+      "email": "Escribe un correo válido",
+      "type": "Selecciona un motivo",
+      "message": "Cuéntame un poco más (mínimo 10 caracteres)"
+    },
+    "channels": {
+      "heading": "Otras formas de contacto",
+      "whatsapp": "Escríbeme por WhatsApp",
+      "email": "Enviar un correo",
+      "linkedin": "Conectar en LinkedIn",
+      "call": "Llamar"
+    }
   }
 }

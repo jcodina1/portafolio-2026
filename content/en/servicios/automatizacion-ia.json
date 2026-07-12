@@ -1,0 +1,51 @@
+{
+  "id": "automatizacion-ia",
+  "slug": "automatizacion-ia",
+  "name": "Automation & AI",
+  "tagline": "Automate the repetitive work and answer with AI using your own business data.",
+  "packages": [
+    {
+      "id": "automatiza-1",
+      "slug": "automatiza-1",
+      "name": "Automate One",
+      "hook": "Get that task you do a thousand times off your plate.",
+      "problem": "Do you copy data from a form into your CRM? Forward emails by hand? Update a spreadsheet every day? I automate that.",
+      "deliverables": [
+        "An automated flow that runs the process on its own (with n8n)",
+        "Connections between the tools you already use",
+        "Tests so it runs without failures"
+      ],
+      "outcome": "You get hours back every week and stop making manual errors.",
+      "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
+    },
+    {
+      "id": "operacion-conectada",
+      "slug": "operacion-conectada",
+      "name": "Connected Operations",
+      "hook": "Get your tools talking to each other.",
+      "problem": "Your CRM, forms, payments and data live on separate islands. I connect them into a single system that works for you.",
+      "deliverables": [
+        "Several automated flows connecting your whole operation",
+        "Integrations with CRM, payment gateways and external APIs",
+        "A dashboard to see that everything is working"
+      ],
+      "outcome": "Your business runs the repetitive work on its own and you focus on selling.",
+      "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
+    },
+    {
+      "id": "asistente-ia",
+      "slug": "asistente-ia",
+      "name": "AI Assistant",
+      "hook": "An assistant that answers with your business data.",
+      "problem": "It serves your customers, answers frequent questions or finds internal information in seconds, using your own data.",
+      "deliverables": [
+        "Chatbot or assistant connected to your real data (RAG)",
+        "Trained on your information, not generic answers",
+        "Integrated where you need it (web, WhatsApp, internal)"
+      ],
+      "outcome": "You respond faster, serve customers 24/7 and free your team from repetitive work.",
+      "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
+    }
+  ],
+  "faq": []
+}

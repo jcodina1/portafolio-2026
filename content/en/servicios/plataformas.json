@@ -1,0 +1,38 @@
+{
+  "id": "plataformas",
+  "slug": "plataformas",
+  "name": "Custom platforms & tools",
+  "tagline": "The software your business needs and that does not exist off the shelf.",
+  "packages": [
+    {
+      "id": "mvp-6-semanas",
+      "slug": "mvp-6-semanas",
+      "name": "MVP in 6 weeks",
+      "hook": "From idea to something working, fast.",
+      "problem": "Do you have a software idea for your business but do not know where to start? We build the minimum version that already solves the problem, you test it with real customers and we grow from there.",
+      "deliverables": [
+        "Your core business flow, working",
+        "Database and deployment ready to use",
+        "Something real in your hands in weeks, not months"
+      ],
+      "outcome": "You validate your idea with controlled investment and without betting everything at once.",
+      "cta": { "label": "Book your free diagnosis", "href": "/contacto" },
+      "featured": true
+    },
+    {
+      "id": "plataforma-a-medida",
+      "slug": "plataforma-a-medida",
+      "name": "Custom platform",
+      "hook": "The software your business needs and does not exist on the market.",
+      "problem": "When Excel and generic tools fall short, I build a platform designed around the way you actually work.",
+      "deliverables": [
+        "A complete system in phases (management, dashboards, integrations)",
+        "Scalable architecture that grows with your business",
+        "Training and documentation for your team"
+      ],
+      "outcome": "A single tool where you run everything, with ordered data in real time.",
+      "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
+    }
+  ],
+  "faq": []
+}

@@ -1,0 +1,37 @@
+{
+  "id": "sitios",
+  "slug": "sitios",
+  "name": "Sites & landing pages that convert",
+  "tagline": "A fast, accessible web presence built to win customers.",
+  "packages": [
+    {
+      "id": "landing-express",
+      "slug": "landing-express",
+      "name": "Landing Express",
+      "hook": "A page that works to win you customers.",
+      "problem": "Perfect for launching a product, a campaign or capturing leads. Fast, beautiful and built to make people act.",
+      "deliverables": [
+        "A high-conversion page, ready in a few weeks",
+        "Optimized for Google (base SEO) and to load fast",
+        "Form and analytics to measure results"
+      ],
+      "outcome": "A presence that captures leads from day one.",
+      "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
+    },
+    {
+      "id": "sitio-pro",
+      "slug": "sitio-pro",
+      "name": "Pro Site",
+      "hook": "Your business, well presented and easy to find.",
+      "problem": "The complete site that builds trust, shows up on Google and that you can update yourself.",
+      "deliverables": [
+        "A multi-page corporate site, fast and accessible",
+        "Technical SEO and careful performance (Core Web Vitals)",
+        "A content manager so you edit without depending on anyone"
+      ],
+      "outcome": "A website that builds trust, attracts traffic and turns visits into customers.",
+      "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
+    }
+  ],
+  "faq": []
+}

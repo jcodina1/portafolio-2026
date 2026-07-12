@@ -95,21 +95,21 @@ con diagnóstico, formulario, anti-spam sin estado y confirmación.
 **Independent Test**: abrir `/es/servicios/[familia]`, verificar gancho→qué recibes→resultado→CTA, y
 completar un envío que llega y confirma (o abre Calendly). Alcanzable por nav sin depender de la home.
 
-- [ ] T033 [P] [US1] Familias/paquetes ES en `content/es/servicios/{automatizacion-ia,plataformas,sitios,soporte}.ts` (copy real)
-- [ ] T034 [P] [US1] Stubs EN en `content/en/servicios/{...}.ts` (TODO traducir)
-- [ ] T035 [P] [US1] Esquema zod compartido `lib/contact-schema.ts` (nombre, email, tipo, mensaje)
-- [ ] T036 [US1] `lib/contact.ts` (`processContact`: honeypot → time-trap → `safeParse` → Resend; **sin Redis/rate-limit en la app**) (dep T035) [contracts/contact.md]
-- [ ] T037 [US1] Server Action `app/actions/contact.ts` (dep T036)
-- [ ] T038 [P] [US1] `components/contact/ContactForm.tsx` (RHF + shadcn, honeypot/`startedAt` fuera del schema, estados éxito/error `aria-live`, pending) (dep T035)
-- [ ] T039 [P] [US1] `components/contact/ChannelButtons.tsx` (`wa.me` dígitos, `tel:` E.164, `mailto:`, LinkedIn; `rel="noopener noreferrer"`)
-- [ ] T040 [P] [US1] `components/contact/CalendlyPopup.tsx` (carga diferida por clic + fallback + estado de carga + focus trap)
-- [ ] T041 [US1] `components/services/PackageCard.tsx` + `FamilyView.tsx` (problema→qué recibes→resultado→CTA; sin precios)
-- [ ] T042 [US1] Índice `app/[locale]/servicios/page.tsx` (dep T018, T041)
-- [ ] T043 [US1] Familia `app/[locale]/servicios/[familia]/page.tsx` (`generateStaticParams`, `generateMetadata`, JSON-LD `Service`/`Offer`/`FAQPage`) (dep T041, T021, T022)
-- [ ] T044 [US1] Contacto `app/[locale]/contacto/page.tsx` (ContactForm + ChannelButtons + Calendly, con loading) (dep T037, T038, T039, T040)
-- [ ] T045 [US1] CTA único **"Agenda tu diagnóstico gratis"** en páginas comerciales → Calendly (dep T040)
-- [ ] T046 [P] [US1] Unit tests de `lib/contact` y `contact-schema` en `tests/unit/contact.test.ts` (dep T036)
-- [ ] T047 [US1] E2E + axe en `tests/e2e/us1-servicios-contacto.spec.ts` (paquete visible; envío válido/inválido/honeypot; diagnóstico abre) (dep T044)
+- [x] T033 [P] [US1] Familias/paquetes ES en `content/es/servicios/{automatizacion-ia,plataformas,sitios,soporte}.ts` (copy real)
+- [x] T034 [P] [US1] Stubs EN en `content/en/servicios/{...}.ts` (TODO traducir)
+- [x] T035 [P] [US1] Esquema zod compartido `lib/contact-schema.ts` (nombre, email, tipo, mensaje)
+- [x] T036 [US1] `lib/contact.ts` (`processContact`: honeypot → time-trap → `safeParse` → Resend; **sin Redis/rate-limit en la app**) (dep T035) [contracts/contact.md]
+- [x] T037 [US1] Server Action `app/actions/contact.ts` (dep T036)
+- [x] T038 [P] [US1] `components/contact/ContactForm.tsx` (RHF + shadcn, honeypot/`startedAt` fuera del schema, estados éxito/error `aria-live`, pending) (dep T035)
+- [x] T039 [P] [US1] `components/contact/ChannelButtons.tsx` (`wa.me` dígitos, `tel:` E.164, `mailto:`, LinkedIn; `rel="noopener noreferrer"`)
+- [x] T040 [P] [US1] `components/contact/CalendlyPopup.tsx` (carga diferida por clic + fallback + estado de carga + focus trap)
+- [x] T041 [US1] `components/services/PackageCard.tsx` + `FamilyView.tsx` (problema→qué recibes→resultado→CTA; sin precios)
+- [x] T042 [US1] Índice `app/[locale]/servicios/page.tsx` (dep T018, T041)
+- [x] T043 [US1] Familia `app/[locale]/servicios/[familia]/page.tsx` (`generateStaticParams`, `generateMetadata`, JSON-LD `Service`/`Offer`/`FAQPage`) (dep T041, T021, T022)
+- [x] T044 [US1] Contacto `app/[locale]/contacto/page.tsx` (ContactForm + ChannelButtons + Calendly, con loading) (dep T037, T038, T039, T040)
+- [x] T045 [US1] CTA único **"Agenda tu diagnóstico gratis"** en páginas comerciales → Calendly (dep T040)
+- [x] T046 [P] [US1] Unit tests de `lib/contact` y `contact-schema` en `tests/unit/contact.test.ts` (dep T036)
+- [x] T047 [US1] E2E + axe en `tests/e2e/us1-servicios-contacto.spec.ts` (paquete visible; envío válido/inválido/honeypot; diagnóstico abre) (dep T044)
 
 **Checkpoint**: US1 funcional e independiente (MVP comercial).
 

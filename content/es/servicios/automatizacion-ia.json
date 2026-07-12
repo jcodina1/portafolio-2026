@@ -1,0 +1,51 @@
+{
+  "id": "automatizacion-ia",
+  "slug": "automatizacion-ia",
+  "name": "Automatización e IA",
+  "tagline": "Automatiza lo repetitivo y responde con IA usando los datos de tu negocio.",
+  "packages": [
+    {
+      "id": "automatiza-1",
+      "slug": "automatiza-1",
+      "name": "Automatiza 1",
+      "hook": "Quítate de encima esa tarea que haces mil veces.",
+      "problem": "¿Copias datos de un formulario al CRM? ¿Reenvías correos a mano? ¿Actualizas una hoja de cálculo cada día? Eso lo automatizo.",
+      "deliverables": [
+        "Un flujo automático que hace ese proceso solo (con n8n)",
+        "Conexión entre las herramientas que ya usas",
+        "Pruebas para que funcione sin fallos"
+      ],
+      "outcome": "Recuperas horas cada semana y dejas de cometer errores manuales.",
+      "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
+    },
+    {
+      "id": "operacion-conectada",
+      "slug": "operacion-conectada",
+      "name": "Operación Conectada",
+      "hook": "Que tus herramientas se hablen entre sí.",
+      "problem": "Tu CRM, tus formularios, tus pagos y tus datos viven en islas separadas. Los conecto en un solo sistema que trabaja por ti.",
+      "deliverables": [
+        "Varios flujos automatizados conectando tu operación completa",
+        "Integraciones con CRM, pasarelas de pago y APIs externas",
+        "Un tablero para ver que todo funciona"
+      ],
+      "outcome": "Tu negocio opera solo en lo repetitivo y tú te enfocas en vender.",
+      "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
+    },
+    {
+      "id": "asistente-ia",
+      "slug": "asistente-ia",
+      "name": "Asistente IA",
+      "hook": "Un asistente que responde con los datos de tu negocio.",
+      "problem": "Atiende a tus clientes, responde preguntas frecuentes o busca información interna en segundos, usando tu propia información.",
+      "deliverables": [
+        "Chatbot o asistente conectado a tus datos reales (RAG)",
+        "Entrenado con tu información, no respuestas genéricas",
+        "Integrado donde lo necesites (web, WhatsApp, interno)"
+      ],
+      "outcome": "Respondes más rápido, atiendes 24/7 y liberas a tu equipo de lo repetitivo.",
+      "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
+    }
+  ],
+  "faq": []
+}
