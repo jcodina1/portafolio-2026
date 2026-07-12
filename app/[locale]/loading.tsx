@@ -1,4 +1,7 @@
-export default function Loading() {
+import { getTranslations } from "next-intl/server";
+
+export default async function Loading() {
+  const t = await getTranslations("common");
   return (
     <div
       role="status"
@@ -7,7 +10,7 @@ export default function Loading() {
     >
       <div className="h-3 w-48 animate-pulse rounded-full bg-muted" />
       <div className="h-3 w-32 animate-pulse rounded-full bg-muted" />
-      <span className="sr-only">Cargando</span>
+      <span className="sr-only">{t("loading")}</span>
     </div>
   );
 }

@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "check:content": "tsx scripts/check-content.ts",
     "prebuild": "tsx scripts/check-content.ts",
@@ -18,6 +18,7 @@
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.12.1",
+    "@eslint/eslintrc": "^3.3.6",
     "@playwright/test": "^1.61.1",
     "@tailwindcss/postcss": "^4.3.2",
     "@testing-library/jest-dom": "^6.9.1",
@@ -25,6 +26,7 @@
     "@types/node": "^26.1.1",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "@typescript-eslint/parser": "^8.63.0",
     "@vitejs/plugin-react": "^6.0.3",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.2.10",
@@ -54,10 +56,10 @@
     "next-themes": "^0.4.6",
     "radix-ui": "^1.6.2",
     "react": "^19.2.7",
-    "react-calendly": "^4.4.0",
     "react-dom": "^19.2.7",
     "react-hook-form": "^7.81.0",
     "resend": "^6.17.2",
+    "server-only": "^0.0.1",
     "tailwind-merge": "^3.6.0",
     "zod": "^4.4.3"
   }

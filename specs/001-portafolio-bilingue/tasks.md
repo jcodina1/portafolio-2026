@@ -226,10 +226,10 @@ redirección; cada familia/proyecto con URL indexable.
 - [x] T095 Pasar el gate de UX por vista ([checklists/ux-design.md](./checklists/ux-design.md))
 - [x] T096 [P] Iconos: reemplazar `lucide-react` de shadcn por Phosphor (una sola familia)
 - [x] T097 **Verificación de seguridad**: CSP + cabeceras presentes en respuestas; cero secretos en el bundle cliente (SC-011); scan de cabeceras (dep T031)
-- [ ] T098 Revisión de seguridad (agente security-reviewer): env, anti-spam sin estado, CSP para Calendly, `rel=noopener`, dependencias
+- [x] T098 Revisión de seguridad (agente security-reviewer): env, anti-spam sin estado, CSP para Calendly, `rel=noopener`, dependencias
 - [x] T099 [P] Docs: `README.md` + guía de edición de contenido (ref. [contracts/content.md](./contracts/content.md))
 - [x] T100 Ejecutar validación completa de [quickstart.md](./quickstart.md)
-- [ ] T101 Revisión de código (agente code-reviewer): corregir CRITICAL/HIGH
+- [x] T101 Revisión de código (agente code-reviewer): corregir CRITICAL/HIGH
 - [ ] T102 Config de despliegue en Vercel (env vars, build, cabeceras) + deploy de preview
 - [ ] T103 Finalizar el caso `este-portafolio` (capturas reales + narrativa) tras el deploy y marcar `published` (dep T102)
 - [x] T104 Re-validar Constitution Check (v1.2.0, 7 principios) y checklists en verde

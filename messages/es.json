@@ -4,7 +4,8 @@
     "perfil": "Perfil",
     "servicios": "Servicios",
     "proyectos": "Proyectos",
-    "contacto": "Contacto"
+    "contacto": "Contacto",
+    "menu": "Menú"
   },
   "cta": {
     "hablemos": "Hablemos",
@@ -27,6 +28,10 @@
     "loading": "Cargando…",
     "error": "Algo salió mal. Intenta de nuevo.",
     "comingSoon": "Próximamente"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "cta": "Volver al inicio"
   },
   "home": {
     "dualHiringKicker": "Para equipos que contratan",
@@ -65,7 +70,8 @@
   "hero": {
     "available": "Disponible para proyectos",
     "eyebrow": "Senior Fullstack · Líder de desarrollo · Bogotá",
-    "subtitle": "Construyo productos web de principio a fin: plataformas, APIs e integraciones, herramientas internas y sitios rápidos, con IA de por medio."
+    "subtitle": "Construyo productos web de principio a fin: plataformas, APIs e integraciones, herramientas internas y sitios rápidos, con IA de por medio.",
+    "ogTagline": "Productos web, integraciones de datos e IA para negocios."
   },
   "services": {
     "title": "Servicios",
@@ -107,7 +113,8 @@
       "whatsapp": "Escríbeme por WhatsApp",
       "email": "Enviar un correo",
       "linkedin": "Conectar en LinkedIn",
-      "call": "Llamar"
+      "call": "Llamar",
+      "whatsappPrefill": "Hola Juan, vengo de tu portafolio y me gustaría hablar de un proyecto."
     }
   }
 }

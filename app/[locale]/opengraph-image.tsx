@@ -1,11 +1,18 @@
 import { ImageResponse } from "next/og";
+import { getTranslations } from "next-intl/server";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "Juan Camilo Codina Ariza";
 
-// OG base (US5/T075 lo refina por tipo de página).
-export default function OpengraphImage() {
+export default async function OpengraphImage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "hero" });
+
   return new ImageResponse(
     (
       <div
@@ -21,22 +28,11 @@ export default function OpengraphImage() {
           color: "#faf9f6",
         }}
       >
-        <div
-          style={{
-            fontSize: 28,
-            letterSpacing: 6,
-            textTransform: "uppercase",
-            color: "#e3b98c",
-          }}
-        >
-          Senior Fullstack · Bogotá
+        <div style={{ fontSize: 26, letterSpacing: 4, textTransform: "uppercase", color: "#e3b98c" }}>
+          {t("eyebrow")}
         </div>
-        <div style={{ fontSize: 88, fontWeight: 700, marginTop: 16 }}>
-          Juan Camilo Codina
-        </div>
-        <div style={{ fontSize: 32, marginTop: 16, color: "#b9b6ac" }}>
-          Productos web, integraciones de datos e IA para negocios.
-        </div>
+        <div style={{ fontSize: 88, fontWeight: 700, marginTop: 16 }}>Juan Camilo Codina</div>
+        <div style={{ fontSize: 30, marginTop: 16, color: "#b9b6ac" }}>{t("ogTagline")}</div>
       </div>
     ),
     { ...size },

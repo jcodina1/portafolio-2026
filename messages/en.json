@@ -4,7 +4,8 @@
     "perfil": "Profile",
     "servicios": "Services",
     "proyectos": "Projects",
-    "contacto": "Contact"
+    "contacto": "Contact",
+    "menu": "Menu"
   },
   "cta": {
     "hablemos": "Let's talk",
@@ -27,6 +28,10 @@
     "loading": "Loading…",
     "error": "Something went wrong. Please try again.",
     "comingSoon": "Coming soon"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "cta": "Back to home"
   },
   "home": {
     "dualHiringKicker": "For teams that hire",
@@ -65,7 +70,8 @@
   "hero": {
     "available": "Available for projects",
     "eyebrow": "Senior Fullstack · Development Lead · Bogotá",
-    "subtitle": "I build web products end to end: platforms, APIs and integrations, internal tools and fast sites, with AI in the loop."
+    "subtitle": "I build web products end to end: platforms, APIs and integrations, internal tools and fast sites, with AI in the loop.",
+    "ogTagline": "Web products, data integrations and AI for businesses."
   },
   "services": {
     "title": "Services",
@@ -107,7 +113,8 @@
       "whatsapp": "Message me on WhatsApp",
       "email": "Send an email",
       "linkedin": "Connect on LinkedIn",
-      "call": "Call"
+      "call": "Call",
+      "whatsappPrefill": "Hi Juan, I came from your portfolio and I'd like to talk about a project."
     }
   }
 }

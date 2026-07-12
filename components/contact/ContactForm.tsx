@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useTranslations } from "next-intl";
 import { sendContact } from "@/app/actions/contact";
+import { LIMITS } from "@/lib/contact-schema";
 import {
   Form,
   FormControl,
@@ -30,14 +31,20 @@ export function ContactForm() {
   const honeypotRef = useRef<HTMLInputElement>(null);
 
   const schema = z.object({
-    nombre: z.string().min(2, { message: t("errors.name") }).max(80),
+    nombre: z
+      .string()
+      .min(LIMITS.nombreMin, { message: t("errors.name") })
+      .max(LIMITS.nombreMax),
     email: z.string().email({ message: t("errors.email") }),
     tipo: z
       .string()
       .refine((v) => ["empleo", "servicio", "otro"].includes(v), {
         message: t("errors.type"),
       }),
-    mensaje: z.string().min(10, { message: t("errors.message") }).max(2000),
+    mensaje: z
+      .string()
+      .min(LIMITS.mensajeMin, { message: t("errors.message") })
+      .max(LIMITS.mensajeMax),
   });
   type Values = z.infer<typeof schema>;
 

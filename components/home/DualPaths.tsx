@@ -13,9 +13,9 @@ export async function DualPaths() {
     <div className="grid gap-6 md:grid-cols-2">
       <Link href="/perfil" className={card}>
         <p className={kicker}>{t("dualHiringKicker")}</p>
-        <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">
+        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight">
           {t("dualHiringTitle")}
-        </h3>
+        </h2>
         <p className="mt-3 text-muted-foreground">{t("dualHiringBody")}</p>
         <span className={cta}>
           {t("dualHiringCta")} <ArrowRight size={16} weight="bold" className="transition-transform group-hover:translate-x-0.5" />
@@ -23,9 +23,9 @@ export async function DualPaths() {
       </Link>
       <Link href="/servicios" className={card}>
         <p className={kicker}>{t("dualBusinessKicker")}</p>
-        <h3 className="mt-3 font-display text-2xl font-semibold tracking-tight">
+        <h2 className="mt-3 font-display text-2xl font-semibold tracking-tight">
           {t("dualBusinessTitle")}
-        </h3>
+        </h2>
         <p className="mt-3 text-muted-foreground">{t("dualBusinessBody")}</p>
         <span className={cta}>
           {t("dualBusinessCta")} <ArrowRight size={16} weight="bold" className="transition-transform group-hover:translate-x-0.5" />

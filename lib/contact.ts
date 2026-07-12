@@ -1,3 +1,4 @@
+import "server-only";
 import { Resend } from "resend";
 import { contactSchema, type ContactState } from "./contact-schema";
 
@@ -31,6 +32,7 @@ export async function processContact(raw: unknown): Promise<ContactState> {
   }
 
   const { nombre, email, tipo, mensaje } = parsed.data;
+  const safeNombre = nombre.replace(/[\r\n]+/g, " ").trim();
 
   const apiKey = process.env.RESEND_API_KEY;
   const to = process.env.CONTACT_TO_EMAIL;
@@ -51,8 +53,8 @@ export async function processContact(raw: unknown): Promise<ContactState> {
       from,
       to,
       replyTo: email,
-      subject: `[${tipo}] Nuevo contacto de ${nombre}`,
-      text: `De: ${nombre} <${email}>\nMotivo: ${tipo}\n\n${mensaje}`,
+      subject: `[${tipo}] Nuevo contacto de ${safeNombre}`,
+      text: `De: ${safeNombre} <${email}>\nMotivo: ${tipo}\n\n${mensaje}`,
     });
     return { ok: true };
   } catch (error) {

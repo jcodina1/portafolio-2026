@@ -33,20 +33,20 @@ export default async function ProfilePage({
   const profile = await getProfile(locale as Locale);
   if (!profile) notFound();
   const t = await getTranslations("profile");
-  const tc = await getTranslations("cta");
 
   return (
     <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-8 md:py-24">
       <JsonLd data={personJsonLd(profile)} />
 
       <div className="grid gap-12 md:grid-cols-[280px_1fr]">
-        <div>
+        <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-border">
           <Image
             src={profile.photo.src}
             alt={profile.photo.alt}
-            width={480}
-            height={600}
-            className="w-full rounded-2xl border border-border object-cover"
+            fill
+            sizes="(min-width: 768px) 280px, 100vw"
+            priority
+            className="object-cover"
           />
         </div>
         <div>

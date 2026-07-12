@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { gsap, useGSAP, ScrollTrigger } from "@/components/motion/gsap";
+import { gsap, useGSAP } from "@/components/motion/gsap";
 import type { Profile } from "@/content/schema";
 
 export function Metrics({ items }: { items: Profile["metrics"] }) {

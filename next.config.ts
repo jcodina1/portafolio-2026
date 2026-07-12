@@ -11,7 +11,7 @@ const contentSecurityPolicy = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://assets.calendly.com",
   "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
-  "img-src 'self' data: blob: https:",
+  "img-src 'self' data: blob: https://picsum.photos https://fastly.picsum.photos",
   "font-src 'self' data:",
   "frame-src https://calendly.com https://*.calendly.com",
   "connect-src 'self' https://*.calendly.com",
@@ -31,6 +31,7 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  poweredByHeader: false,
   pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
   images: {
     remotePatterns: [
