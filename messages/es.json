@@ -1,0 +1,34 @@
+{
+  "nav": {
+    "brand": "Codina",
+    "perfil": "Perfil",
+    "servicios": "Servicios",
+    "proyectos": "Proyectos",
+    "contacto": "Contacto"
+  },
+  "cta": {
+    "hablemos": "Hablemos",
+    "verProyectos": "Ver proyectos",
+    "verSoluciones": "Ver soluciones",
+    "verPerfil": "Ver mi perfil",
+    "diagnostico": "Agenda tu diagnóstico gratis"
+  },
+  "theme": {
+    "toggle": "Cambiar tema",
+    "light": "Claro",
+    "dark": "Oscuro"
+  },
+  "language": {
+    "switch": "Cambiar idioma",
+    "es": "Español",
+    "en": "English"
+  },
+  "common": {
+    "loading": "Cargando…",
+    "error": "Algo salió mal. Intenta de nuevo.",
+    "comingSoon": "Próximamente"
+  },
+  "home": {
+    "wip": "Sitio en construcción."
+  }
+}

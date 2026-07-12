@@ -1,0 +1,20 @@
+# Juan Camilo Codina Ariza
+
+> Desarrollador Frontend/Fullstack Senior (Bogotá, Colombia). Portafolio bilingüe
+> (ES/EN): perfil profesional, proyectos y servicios de desarrollo de software y
+> automatización con IA para PYMEs. Stack: TypeScript, React, Next.js, Node.js, n8n.
+
+## Perfil
+- [Perfil / Profile](https://tudominio.com/en/profile): experiencia, stack y trayectoria.
+
+## Servicios
+- [Servicios / Services](https://tudominio.com/en/services): automatización e IA,
+  plataformas a medida, sitios de alta conversión y soporte.
+
+## Proyectos
+- [Proyectos / Projects](https://tudominio.com/en/projects): casos de trabajo reales.
+
+## Contacto
+- [Contacto / Contact](https://tudominio.com/en/contact)
+
+<!-- Bloque 1: estructura base. US5 (T074) finaliza con el dominio real y enlaces exactos. -->

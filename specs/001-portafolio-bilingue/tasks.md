@@ -28,14 +28,14 @@ tu diagnóstico gratis"). Eliminado Upstash/Redis (anti-spam sin estado). Añadi
 
 ## Phase 1: Setup (Shared Infrastructure)
 
-- [ ] T001 Inicializar proyecto Next.js 16 (App Router, TypeScript, Turbopack, React 19) en la raíz
-- [ ] T002 [P] Configurar Tailwind CSS v4 (`@tailwindcss/postcss`, `app/globals.css` con `@import "tailwindcss"`)
-- [ ] T003 [P] Inicializar shadcn/ui y añadir base (`button card input textarea label form dialog`) en `components/ui/`
-- [ ] T004 [P] TypeScript strict, ESLint y Prettier (`tsconfig.json`, `eslint.config.mjs`, `.prettierrc`)
-- [ ] T005 [P] Instalar deps: `next-intl gsap @gsap/react next-themes zod react-hook-form @hookform/resolvers resend geist @phosphor-icons/react @next/mdx gray-matter react-calendly schema-dts` (sin Upstash/Redis)
-- [ ] T006 [P] Fuentes en `app/fonts.ts` (Geist + Geist Mono vía `geist`; Clash Display vía `next/font/local`, woff2 subset Latin-1 en `public/fonts/`)
-- [ ] T007 [P] `.env.example` con `RESEND_API_KEY`, `CONTACT_FROM_EMAIL`, `CONTACT_TO_EMAIL` y `NEXT_PUBLIC_*` (Calendly/WhatsApp/email/LinkedIn); sin variables de Redis
-- [ ] T008 Scripts en `package.json` (`dev`, `build`, `prebuild=check:content`, `typecheck`, `test`, `test:e2e`, `lhci`)
+- [x] T001 Inicializar proyecto Next.js 16 (App Router, TypeScript, Turbopack, React 19) en la raíz
+- [x] T002 [P] Configurar Tailwind CSS v4 (`@tailwindcss/postcss`, `app/globals.css` con `@import "tailwindcss"`)
+- [x] T003 [P] Inicializar shadcn/ui y añadir base (`button card input textarea label form dialog`) en `components/ui/`
+- [x] T004 [P] TypeScript strict, ESLint y Prettier (`tsconfig.json`, `eslint.config.mjs`, `.prettierrc`)
+- [x] T005 [P] Instalar deps: `next-intl gsap @gsap/react next-themes zod react-hook-form @hookform/resolvers resend geist @phosphor-icons/react @next/mdx gray-matter react-calendly schema-dts` (sin Upstash/Redis)
+- [x] T006 [P] Fuentes en `app/fonts.ts` (Geist + Geist Mono vía `geist`; Clash Display vía `next/font/local`, woff2 subset Latin-1 en `public/fonts/`)
+- [x] T007 [P] `.env.example` con `RESEND_API_KEY`, `CONTACT_FROM_EMAIL`, `CONTACT_TO_EMAIL` y `NEXT_PUBLIC_*` (Calendly/WhatsApp/email/LinkedIn); sin variables de Redis
+- [x] T008 Scripts en `package.json` (`dev`, `build`, `prebuild=check:content`, `typecheck`, `test`, `test:e2e`, `lhci`)
 
 ---
 
@@ -46,42 +46,42 @@ arnés de pruebas. **⚠️ Ninguna historia empieza hasta completar esta fase.*
 
 ### i18n (routing SSG)
 
-- [ ] T009 [P] `i18n/routing.ts` (locales `es`/`en`, default `es`, `localePrefix: 'always'`, **pathnames localizados**: `proyectos`↔`projects`, `servicios`↔`services`, `perfil`↔`profile`, `contacto`↔`contact`)
-- [ ] T010 [P] `i18n/request.ts` (`getRequestConfig` carga `messages/{locale}.json`)
-- [ ] T011 [P] `i18n/navigation.ts` (`createNavigation(routing)`)
-- [ ] T012 `middleware.ts` (`createMiddleware` + matcher EXCLUYE `_next`, `api`, `sitemap.xml`, `robots.txt`, `llms.txt`) (dep T009)
-- [ ] T013 `app/[locale]/layout.tsx` (`setRequestLocale`, `generateStaticParams`, `<html lang>` + `suppressHydrationWarning`, fuentes, providers) (dep T006, T009-T011)
-- [ ] T014 [P] Mensajes UI base `messages/es.json` y `messages/en.json` (nav, CTAs, labels, estados de carga/error)
+- [x] T009 [P] `i18n/routing.ts` (locales `es`/`en`, default `es`, `localePrefix: 'always'`, **pathnames localizados**: `proyectos`↔`projects`, `servicios`↔`services`, `perfil`↔`profile`, `contacto`↔`contact`)
+- [x] T010 [P] `i18n/request.ts` (`getRequestConfig` carga `messages/{locale}.json`)
+- [x] T011 [P] `i18n/navigation.ts` (`createNavigation(routing)`)
+- [x] T012 `middleware.ts` (`createMiddleware` + matcher EXCLUYE `_next`, `api`, `sitemap.xml`, `robots.txt`, `llms.txt`) (dep T009)
+- [x] T013 `app/[locale]/layout.tsx` (`setRequestLocale`, `generateStaticParams`, `<html lang>` + `suppressHydrationWarning`, fuentes, providers) (dep T006, T009-T011)
+- [x] T014 [P] Mensajes UI base `messages/es.json` y `messages/en.json` (nav, CTAs, labels, estados de carga/error)
 
 ### Tokens y tema
 
-- [ ] T015 [P] `app/globals.css` (3 capas: primitivos → semánticos `:root`/`.dark` → `@theme inline`; `@custom-variant dark`; `color-scheme`; variantes AA del cobre) (dep T002)
-- [ ] T016 `app/providers.tsx` (`next-themes` `attribute="class"`, `disableTransitionOnChange`) y cablear en layout (dep T013)
+- [x] T015 [P] `app/globals.css` (3 capas: primitivos → semánticos `:root`/`.dark` → `@theme inline`; `@custom-variant dark`; `color-scheme`; variantes AA del cobre) (dep T002)
+- [x] T016 `app/providers.tsx` (`next-themes` `attribute="class"`, `disableTransitionOnChange`) y cablear en layout (dep T013)
 
 ### Modelo de contenido
 
-- [ ] T017 [P] `content/schema.ts` (zod: profile, project, serviceFamily, servicePackage, helper `localized`) (dep T005)
-- [ ] T018 [P] `lib/content/{profile,services,projects}.ts` (patrón repositorio; `gray-matter`) (dep T017)
-- [ ] T019 `next.config.ts` (`createMDX`) + `mdx-components.tsx` (dep T001)
-- [ ] T020 `scripts/check-content.ts` (zod + paridad ES/EN + paridad de slugs) y cablear `prebuild` (dep T017, T018)
+- [x] T017 [P] `content/schema.ts` (zod: profile, project, serviceFamily, servicePackage, helper `localized`) (dep T005)
+- [x] T018 [P] `lib/content/{profile,services,projects}.ts` (patrón repositorio; `gray-matter`) (dep T017)
+- [x] T019 `next.config.ts` (`createMDX`) + `mdx-components.tsx` (dep T001)
+- [x] T020 `scripts/check-content.ts` (zod + paridad ES/EN + paridad de slugs) y cablear `prebuild` (dep T017, T018)
 
 ### SEO/GEO base
 
-- [ ] T021 [P] `lib/seo/metadata.ts` (`metadataBase`, canónica por locale, `alternates.languages` + `x-default`, OG/Twitter) (dep T013)
-- [ ] T022 [P] `components/seo/JsonLd.tsx` (escape de `<`) + `lib/seo/jsonld.ts` (`schema-dts`, `@graph`, `@id`)
-- [ ] T023 [P] `app/sitemap.ts` (todas las rutas + `alternates.languages`)
-- [ ] T024 [P] `app/robots.ts` (permite crawlers de IA; host; sitemap)
-- [ ] T025 [P] `public/llms.txt` (estructura base; se completa en US5)
-- [ ] T026 [P] `app/[locale]/opengraph-image.tsx` (`ImageResponse`, fuente vía `fetch().arrayBuffer()`)
+- [x] T021 [P] `lib/seo/metadata.ts` (`metadataBase`, canónica por locale, `alternates.languages` + `x-default`, OG/Twitter) (dep T013)
+- [x] T022 [P] `components/seo/JsonLd.tsx` (escape de `<`) + `lib/seo/jsonld.ts` (`schema-dts`, `@graph`, `@id`)
+- [x] T023 [P] `app/sitemap.ts` (todas las rutas + `alternates.languages`)
+- [x] T024 [P] `app/robots.ts` (permite crawlers de IA; host; sitemap)
+- [x] T025 [P] `public/llms.txt` (estructura base; se completa en US5)
+- [x] T026 [P] `app/[locale]/opengraph-image.tsx` (`ImageResponse`, fuente vía `fetch().arrayBuffer()`)
 
 ### Motion, shell, seguridad y carga
 
-- [ ] T027 [P] `components/motion/` (`gsap.ts` registra plugins en cliente; `useReveal` con `ScrollTrigger.batch`+`matchMedia`; `useParallax` con `quickTo`) (dep T005)
-- [ ] T028 [P] `components/layout/Nav.tsx` (sticky glass, una línea, ≤72px, CTA "Hablemos") + `components/layout/Footer.tsx`
-- [ ] T029 [P] `components/i18n/LocaleSwitcher.tsx` + `components/theme/ThemeToggle.tsx` (esqueleto)
-- [ ] T030 [P] Arnés de pruebas: `vitest.config.ts`, `playwright.config.ts` (+ `@axe-core/playwright`), Lighthouse CI en `tests/`
-- [ ] T031 [P] **Seguridad**: cabeceras + CSP en `next.config.ts` (HSTS, `X-Content-Type-Options: nosniff`, control de framing, `Referrer-Policy`, `Permissions-Policy`; CSP permite solo orígenes de Calendly) [FR-031]
-- [ ] T032 [P] **Carga**: convención de UI de carga: `app/[locale]/loading.tsx` + patrón `Suspense`/skeleton reutilizable en `components/ui/Skeleton*` [FR-036]
+- [x] T027 [P] `components/motion/` (`gsap.ts` registra plugins en cliente; `useReveal` con `ScrollTrigger.batch`+`matchMedia`; `useParallax` con `quickTo`) (dep T005)
+- [x] T028 [P] `components/layout/Nav.tsx` (sticky glass, una línea, ≤72px, CTA "Hablemos") + `components/layout/Footer.tsx`
+- [x] T029 [P] `components/i18n/LocaleSwitcher.tsx` + `components/theme/ThemeToggle.tsx` (esqueleto)
+- [x] T030 [P] Arnés de pruebas: `vitest.config.ts`, `playwright.config.ts` (+ `@axe-core/playwright`), Lighthouse CI en `tests/`
+- [x] T031 [P] **Seguridad**: cabeceras + CSP en `next.config.ts` (HSTS, `X-Content-Type-Options: nosniff`, control de framing, `Referrer-Policy`, `Permissions-Policy`; CSP permite solo orígenes de Calendly) [FR-031]
+- [x] T032 [P] **Carga**: convención de UI de carga: `app/[locale]/loading.tsx` + patrón `Suspense`/skeleton reutilizable en `components/ui/Skeleton*` [FR-036]
 
 **Checkpoint**: Fundación lista (incluye seguridad y carga). Las historias pueden comenzar.
 
