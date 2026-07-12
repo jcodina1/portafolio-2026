@@ -37,3 +37,7 @@ coverage/
 # Playwright
 test-results/
 playwright-report/
+
+# pnpm (proyecto usa npm)
+pnpm-lock.yaml
+pnpm-workspace.yaml
