@@ -165,11 +165,11 @@ detalle con problema→solución→resultado, stack, capturas y enlaces.
 **Independent Test**: cambiar ES↔EN en varias páginas; todo se traduce, la URL refleja el idioma y se
 mantiene la página equivalente; `check:content` pasa.
 
-- [ ] T066 [US4] `LocaleSwitcher` mantiene la página equivalente (mapear por id/pathname de T009) (dep T029, T009)
-- [ ] T067 [US4] Completar traducciones EN de `messages/en.json` y contenido `published` (perfil, servicios, proyectos) (dep T014, T033, T048, T060)
-- [ ] T068 [US4] `hreflang` + `x-default` verificados en todas las rutas (dep T021)
-- [ ] T069 [US4] Reforzar paridad en `scripts/check-content.ts` (un `published` sin EN falla el build) (dep T020, T067)
-- [ ] T070 [US4] E2E `tests/e2e/us4-i18n.spec.ts` (toggle mantiene página; sin texto del idioma opuesto) + `check:content` en CI (dep T066)
+- [x] T066 [US4] `LocaleSwitcher` mantiene la página equivalente (mapear por id/pathname de T009) (dep T029, T009)
+- [x] T067 [US4] Completar traducciones EN de `messages/en.json` y contenido `published` (perfil, servicios, proyectos) (dep T014, T033, T048, T060)
+- [x] T068 [US4] `hreflang` + `x-default` verificados en todas las rutas (dep T021)
+- [x] T069 [US4] Reforzar paridad en `scripts/check-content.ts` (un `published` sin EN falla el build) (dep T020, T067)
+- [x] T070 [US4] E2E `tests/e2e/us4-i18n.spec.ts` (toggle mantiene página; sin texto del idioma opuesto) + `check:content` en CI (dep T066)
 
 **Checkpoint**: Sitio bilingüe con paridad garantizada.
 
@@ -201,11 +201,11 @@ redirección; cada familia/proyecto con URL indexable.
 
 **Goal**: Alternar tema sin parpadeo, persistente, con contraste AA en ambos.
 
-- [ ] T080 [US6] Finalizar anti-FOUC de `next-themes` (script/estrategia de clase) (dep T016)
-- [ ] T081 [US6] UX del `ThemeToggle` (icono Phosphor, `aria-label`, teclado) (dep T029)
-- [ ] T082 [US6] Verificar contraste AA en ambos temas (texto/enlaces con variantes AA del cobre) (dep T015)
-- [ ] T083 [US6] `color-scheme` y controles nativos por tema (dep T015)
-- [ ] T084 [US6] E2E `tests/e2e/us6-tema.spec.ts` (persistencia sin flash + axe en ambos temas) (dep T080)
+- [x] T080 [US6] Finalizar anti-FOUC de `next-themes` (script/estrategia de clase) (dep T016)
+- [x] T081 [US6] UX del `ThemeToggle` (icono Phosphor, `aria-label`, teclado) (dep T029)
+- [x] T082 [US6] Verificar contraste AA en ambos temas (texto/enlaces con variantes AA del cobre) (dep T015)
+- [x] T083 [US6] `color-scheme` y controles nativos por tema (dep T015)
+- [x] T084 [US6] E2E `tests/e2e/us6-tema.spec.ts` (persistencia sin flash + axe en ambos temas) (dep T080)
 
 **Checkpoint**: Todas las historias independientes y funcionales.
 
@@ -215,24 +215,24 @@ redirección; cada familia/proyecto con URL indexable.
 
 - [ ] T085 [P] Micro-física magnética del CTA en `components/ui/MagneticButton.tsx` (desktop + `no-preference`)
 - [ ] T086 [P] Ajuste fino de formas del hero (pausa offscreen, `will-change` con moderación)
-- [ ] T087 Auditoría reduced-motion (todo el motion bajo `gsap.matchMedia()` colapsa a estático)
+- [x] T087 Auditoría reduced-motion (todo el motion bajo `gsap.matchMedia()` colapsa a estático)
 - [ ] T088 [P] Regresión visual Playwright en 320/768/1024/1440, ambos temas, en `tests/visual/`
-- [ ] T089 Auditoría de accesibilidad (agente a11y + axe): teclado, foco, contraste; corregir AA
+- [x] T089 Auditoría de accesibilidad (agente a11y + axe): teclado, foco, contraste; corregir AA
 - [ ] T090 Lighthouse CI: LCP<2.5s, INP<200ms, CLS<0.1; JS de home <150KB gz
 - [ ] T091 Análisis de bundle (`@next/bundle-analyzer`) + `next/dynamic` para lo below-the-fold
-- [ ] T092 **Auditoría de carga**: toda operación async con loading/skeleton (SC-012); `loading.tsx` por segmento verificado (dep T032)
-- [ ] T093 Imágenes: slots reales, `picsum` seed provisional, `next/image` `priority` solo en LCP
-- [ ] T094 Auto-auditoría de copy: cero em-dash, sin AI-tells, un registro (design-system §10)
-- [ ] T095 Pasar el gate de UX por vista ([checklists/ux-design.md](./checklists/ux-design.md))
-- [ ] T096 [P] Iconos: reemplazar `lucide-react` de shadcn por Phosphor (una sola familia)
-- [ ] T097 **Verificación de seguridad**: CSP + cabeceras presentes en respuestas; cero secretos en el bundle cliente (SC-011); scan de cabeceras (dep T031)
+- [x] T092 **Auditoría de carga**: toda operación async con loading/skeleton (SC-012); `loading.tsx` por segmento verificado (dep T032)
+- [x] T093 Imágenes: slots reales, `picsum` seed provisional, `next/image` `priority` solo en LCP
+- [x] T094 Auto-auditoría de copy: cero em-dash, sin AI-tells, un registro (design-system §10)
+- [x] T095 Pasar el gate de UX por vista ([checklists/ux-design.md](./checklists/ux-design.md))
+- [x] T096 [P] Iconos: reemplazar `lucide-react` de shadcn por Phosphor (una sola familia)
+- [x] T097 **Verificación de seguridad**: CSP + cabeceras presentes en respuestas; cero secretos en el bundle cliente (SC-011); scan de cabeceras (dep T031)
 - [ ] T098 Revisión de seguridad (agente security-reviewer): env, anti-spam sin estado, CSP para Calendly, `rel=noopener`, dependencias
-- [ ] T099 [P] Docs: `README.md` + guía de edición de contenido (ref. [contracts/content.md](./contracts/content.md))
-- [ ] T100 Ejecutar validación completa de [quickstart.md](./quickstart.md)
+- [x] T099 [P] Docs: `README.md` + guía de edición de contenido (ref. [contracts/content.md](./contracts/content.md))
+- [x] T100 Ejecutar validación completa de [quickstart.md](./quickstart.md)
 - [ ] T101 Revisión de código (agente code-reviewer): corregir CRITICAL/HIGH
 - [ ] T102 Config de despliegue en Vercel (env vars, build, cabeceras) + deploy de preview
 - [ ] T103 Finalizar el caso `este-portafolio` (capturas reales + narrativa) tras el deploy y marcar `published` (dep T102)
-- [ ] T104 Re-validar Constitution Check (v1.2.0, 7 principios) y checklists en verde
+- [x] T104 Re-validar Constitution Check (v1.2.0, 7 principios) y checklists en verde
 
 ---
 

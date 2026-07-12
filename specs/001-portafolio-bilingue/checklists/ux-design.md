@@ -7,71 +7,71 @@ Deriva de [design-system.md](../design-system.md) y del skill rector anti-slop. 
 
 ## Consistencia global (locks)
 
-- [ ] **Theme lock**: la página no invierte por sección; única excepción deliberada = banda IA como
+- [x] **Theme lock**: la página no invierte por sección; única excepción deliberada = banda IA como
       bloque de color (una vez).
-- [ ] **Color lock**: un único acento (cobre) en toda la página; texto/enlaces con variante AA por
+- [x] **Color lock**: un único acento (cobre) en toda la página; texto/enlaces con variante AA por
       tema (`#8A5A34` claro / `#E3B98C` oscuro).
-- [ ] **Shape lock**: un sistema de radios (botones pill · tarjetas 16px · inputs 10-12px).
-- [ ] **Tipografía**: Clash Display (display) + Geist (cuerpo) + Geist Mono (mono); sin Inter, sin
+- [x] **Shape lock**: un sistema de radios (botones pill · tarjetas 16px · inputs 10-12px).
+- [x] **Tipografía**: Clash Display (display) + Geist (cuerpo) + Geist Mono (mono); sin Inter, sin
       serif; énfasis con itálica/bold de la misma familia.
-- [ ] **Un registro de copy** por página; **cero em-dash** en todo el texto visible.
+- [x] **Un registro de copy** por página; **cero em-dash** en todo el texto visible.
 
 ## Layout y jerarquía
 
-- [ ] Hero cabe en el viewport: titular ≤ 2 líneas, subtítulo ≤ 20 palabras, CTA sin scroll;
+- [x] Hero cabe en el viewport: titular ≤ 2 líneas, subtítulo ≤ 20 palabras, CTA sin scroll;
       `min-h-[100dvh]`, `pt` ≤ 24.
-- [ ] Hero: máx. 4 elementos de texto; sin tagline/micro-strip extra.
-- [ ] Nav en una sola línea desktop, altura ≤ 72px.
-- [ ] ≥ 4 familias de layout distintas; ninguna familia repetida más de una vez; sin 3 cards
+- [x] Hero: máx. 4 elementos de texto; sin tagline/micro-strip extra.
+- [x] Nav en una sola línea desktop, altura ≤ 72px.
+- [x] ≥ 4 familias de layout distintas; ninguna familia repetida más de una vez; sin 3 cards
       idénticas; zigzag ≤ 2 seguidas.
-- [ ] Eyebrows racionados: ≤ 1 por cada 3 secciones (hero incluido).
-- [ ] Colapso móvil explícito por sección (`w-full`, `px-…`, grid → 1 columna < 768px).
+- [x] Eyebrows racionados: ≤ 1 por cada 3 secciones (hero incluido).
+- [x] Colapso móvil explícito por sección (`w-full`, `px-…`, grid → 1 columna < 768px).
 
 ## Motion (GSAP)
 
-- [ ] Cada animación se justifica en una frase (jerarquía/narrativa/feedback/estado).
-- [ ] Reveal = `opacity` + `translateY` (sin blur); `ScrollTrigger.batch` + `once:true`.
-- [ ] Nombre del hero con `SplitText` sobre `<h1>` (`aria:"auto"`); **LCP no oculto** con opacity 0.
-- [ ] Formas 3D en CSS + `quickTo` para parallax; pausan fuera de viewport; sin R3F.
-- [ ] `pin/scrub` como máximo en una sección; marquee máximo uno.
-- [ ] Todo envuelto en `gsap.matchMedia()`; `prefers-reduced-motion` → estático; sin
+- [x] Cada animación se justifica en una frase (jerarquía/narrativa/feedback/estado).
+- [x] Reveal = `opacity` + `translateY` (sin blur); `ScrollTrigger.batch` + `once:true`.
+- [x] Nombre del hero con `SplitText` sobre `<h1>` (`aria:"auto"`); **LCP no oculto** con opacity 0.
+- [x] Formas 3D en CSS + `quickTo` para parallax; pausan fuera de viewport; sin R3F.
+- [x] `pin/scrub` como máximo en una sección; marquee máximo uno.
+- [x] Todo envuelto en `gsap.matchMedia()`; `prefers-reduced-motion` → estático; sin
       `window.addEventListener('scroll')`.
 
 ## Estados e interacción
 
-- [ ] Hover/focus/active diseñados; `:active` con feedback físico.
-- [ ] Focus visible (anillo AA) en ambos temas; nunca `outline:none` sin reemplazo.
-- [ ] Estados loading (skeleton), empty ("próximamente"), error (inline + `role="alert"` con canal
+- [x] Hover/focus/active diseñados; `:active` con feedback físico.
+- [x] Focus visible (anillo AA) en ambos temas; nunca `outline:none` sin reemplazo.
+- [x] Estados loading (skeleton), empty ("próximamente"), error (inline + `role="alert"` con canal
       alternativo).
-- [ ] Contraste AA de todo CTA, input, placeholder, focus ring y helper en su fondo (ambos temas).
+- [x] Contraste AA de todo CTA, input, placeholder, focus ring y helper en su fondo (ambos temas).
 
 ## Assets
 
-- [ ] Iconos de una sola familia (Phosphor); sin SVG de icono a mano.
-- [ ] Imágenes con dimensiones explícitas y `alt`; placeholders `picsum` con seed hasta tener
+- [x] Iconos de una sola familia (Phosphor); sin SVG de icono a mano.
+- [x] Imágenes con dimensiones explícitas y `alt`; placeholders `picsum` con seed hasta tener
       reales; **sin fake screenshots con `<div>`**.
-- [ ] `next/image` con `priority` solo en el LCP; resto diferido.
+- [x] `next/image` con `priority` solo en el LCP; resto diferido.
 
 ## Conversión
 
-- [ ] Bifurcación dual clara en la home (contratar / negocios).
-- [ ] Una etiqueta por intención de CTA ("Hablemos" contratación · "Agenda tu diagnóstico gratis"
+- [x] Bifurcación dual clara en la home (contratar / negocios).
+- [x] Una etiqueta por intención de CTA ("Hablemos" contratación · "Agenda tu diagnóstico gratis"
       PYME); sin CTAs duplicados de la misma intención.
-- [ ] Cada paquete de servicio: problema → qué recibes → resultado → CTA.
+- [x] Cada paquete de servicio: problema → qué recibes → resultado → CTA.
 
 ## Rendimiento y carga (CWV)
 
-- [ ] LCP < 2.5s (el nombre pinta de inmediato), INP < 200ms, CLS < 0.1.
-- [ ] JS de home < 150 KB gz; GSAP y terceros (Calendly) diferidos.
-- [ ] Solo se anima `transform`/`opacity`/`clip-path`.
-- [ ] Toda operación async (envío, Calendly, transición de ruta, contenido diferido) muestra
+- [x] LCP < 2.5s (el nombre pinta de inmediato), INP < 200ms, CLS < 0.1.
+- [x] JS de home < 150 KB gz; GSAP y terceros (Calendly) diferidos.
+- [x] Solo se anima `transform`/`opacity`/`clip-path`.
+- [x] Toda operación async (envío, Calendly, transición de ruta, contenido diferido) muestra
       loading/skeleton en < 100 ms; nunca UI en blanco o congelada; `loading.tsx` por segmento.
 
 ## Seguridad
 
-- [ ] CSP + cabeceras de seguridad presentes; CSP permite solo los orígenes de Calendly.
-- [ ] Cero secretos en el bundle cliente (solo `NEXT_PUBLIC_*` no sensibles).
-- [ ] Enlaces externos con `rel="noopener noreferrer"`; anti-spam sin estado (honeypot + time-trap).
+- [x] CSP + cabeceras de seguridad presentes; CSP permite solo los orígenes de Calendly.
+- [x] Cero secretos en el bundle cliente (solo `NEXT_PUBLIC_*` no sensibles).
+- [x] Enlaces externos con `rel="noopener noreferrer"`; anti-spam sin estado (honeypot + time-trap).
 
 ## Notas
 
