@@ -1,10 +1,10 @@
 <!--
 SYNC IMPACT REPORT
-Version change: 1.0.0 → 1.1.0
-Bump rationale: MINOR — expansión material de principios (GEO/LLM en I, doble ruta de
-conversión en II, sistema de motion en IV, tipografía + reglas anti-plantilla + tema en VI)
-y ampliación de Restricciones Técnicas (arquitectura híbrida, tema claro/oscuro, motion GSAP,
-canales de contacto, tokens de paleta). Sin eliminaciones ni redefiniciones incompatibles.
+Version change: 1.1.0 → 1.2.0
+Bump rationale: MINOR — añade Seguridad web (CSP + cabeceras) a Restricciones Técnicas y estados de
+carga obligatorios en el Principio IV. (1.1.0 añadió GEO/LLM en I, doble ruta de conversión en II,
+motion GSAP en IV, tipografía/tema/anti-plantilla en VI, y arquitectura híbrida + tokens.) Sin
+eliminaciones ni redefiniciones incompatibles.
 Modified principles:
   I. Visibilidad y SEO primero → + GEO/AEO (descubribilidad por LLMs)
   II. Orientación a conversión → doble ruta (contratar / comprar servicios) + gancho diagnóstico
@@ -73,9 +73,12 @@ transforms**, NO con React Three Fiber (evitar el peso de three.js). GSAP se ini
 con guarda de hidratación (`useGSAP`/`gsap.context`). Las imágenes DEBEN servirse en AVIF/WebP con
 dimensiones explícitas y `next/image`, priorizando solo el hero y difiriendo el resto. Las
 bibliotecas pesadas se importan de forma dinámica. Presupuesto de JS de la home objetivo
-< 150 KB gzip (excluyendo lo diferido).
+< 150 KB gzip (excluyendo lo diferido). Toda operación asíncrona o contenido diferido (envío del
+formulario, apertura de la agenda, transición de ruta, sección o imagen que carga) DEBE mostrar un
+estado de carga (skeleton o indicador); nunca UI en blanco o congelada. Las rutas exponen UI de
+carga a nivel de segmento.
 Rationale: el rendimiento afecta al SEO (I), a la conversión (II) y a la percepción de competencia
-técnica; el motion premium no puede costar los CWV.
+técnica; el motion premium no puede costar los CWV, y una espera sin feedback se percibe como lentitud.
 
 ### V. Internacionalización real ES/EN
 El sitio es bilingüe español/inglés desde v1. NINGÚN texto visible puede estar hardcodeado: todo
@@ -115,8 +118,13 @@ Rationale: permite iterar contenido con rapidez, reduce regresiones y sostiene e
 - **Tema**: claro (fondo hueso) y oscuro (marino-negro) con `next-themes`, persistente y sin FOUC.
 - **Tipografía**: Clash Display + Geist + Geist Mono (self-host/subset donde sea posible).
 - **Motion**: GSAP + ScrollTrigger (+ SplitText); sin otra librería de animación; hero 3D con CSS.
-- **Contacto**: formulario (validación cliente + servidor, anti-abuso con honeypot o rate limit y
-  servicio de email transaccional) + agenda/Calendly + WhatsApp + email + LinkedIn.
+- **Contacto**: formulario (validación cliente + servidor, anti-abuso **sin estado** con honeypot +
+  time-trap, y servicio de email transaccional) + agenda/Calendly + WhatsApp + email + LinkedIn. Sin
+  base de datos ni Redis; firewall/BotID de Vercel como refuerzo opcional de plataforma.
+- **Seguridad web**: CSP en producción que permite solo los orígenes de terceros usados (Calendly) +
+  cabeceras (HSTS, `X-Content-Type-Options: nosniff`, control de framing, `Referrer-Policy`,
+  `Permissions-Policy`). Secretos solo en variables de entorno del servidor; nada sensible en el
+  bundle cliente. Enlaces externos con `rel="noopener noreferrer"`; dependencias actualizadas.
 - **Paleta y tokens** (acento único cobre): Marino `#14293B`, Cobre `#B58863` (AA: `#8A5A34`
   sobre claro / `#E3B98C` sobre oscuro), Grafito `#3A3A38`, Piedra `#B9B6AC`, Hueso `#FAF9F6`,
   Negro `#0E151C`.
@@ -148,4 +156,4 @@ Cumplimiento: cada plan de implementación DEBE incluir un "Constitution Check" 
 frente a estos principios. La complejidad que viole un principio DEBE justificarse explícitamente o
 rediseñarse.
 
-**Version**: 1.1.0 | **Ratified**: 2026-07-11 | **Last Amended**: 2026-07-11
+**Version**: 1.2.0 | **Ratified**: 2026-07-11 | **Last Amended**: 2026-07-11

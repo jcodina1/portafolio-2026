@@ -199,9 +199,11 @@ contenido y conversión.
   problema → solución → resultado, capturas (con placeholders con seed hasta tener reales) y
   enlaces (demo/repositorio) opcionales.
 - **FR-009**: El sistema DEBE soportar proyectos de dos orígenes (empresa y personales) y permitir
-  marcar proyectos como "próximamente". La v1 incluye 3 casos reales: plataforma de gestión
-  comercial y financiera (WindMar Home), plataforma de simulación financiera con mapas
-  (freelance) y Website 2.0 + landings de alta conversión (WindMar Home).
+  marcar proyectos como "próximamente". La v1 incluye 4 casos: plataforma de gestión comercial y
+  financiera (WindMar Home), plataforma de simulación financiera con mapas (freelance), Website 2.0
+  + landings de alta conversión (WindMar Home) y **este mismo portafolio** (proyecto personal:
+  Next.js 16, i18n ES/EN, GSAP, SEO/GEO, construido con Spec Kit) como demostración meta de la
+  forma de trabajar del autor.
 
 **Servicios (conversión, por paquetes)**
 
@@ -265,6 +267,29 @@ contenido y conversión.
   de WhatsApp y enlace de agenda. No se inventan datos; hasta tenerlos se usan marcadores
   identificables.
 
+**Seguridad**
+
+- **FR-031**: El sitio DEBE servir una Content Security Policy (CSP) en producción y cabeceras de
+  seguridad (HSTS, `X-Content-Type-Options`, `Referrer-Policy`, `Permissions-Policy`, control de
+  framing). La CSP DEBE permitir explícitamente los orígenes de terceros usados (agenda Calendly) y
+  nada más.
+- **FR-032**: NINGÚN secreto (claves de API, tokens) puede quedar expuesto en el bundle del cliente;
+  solo variables `NEXT_PUBLIC_*` no sensibles llegan al navegador.
+- **FR-033**: El endpoint de contacto DEBE validar en servidor, mitigar abuso sin fricción (honeypot
+  + time-trap, sin estado) y no revelar información sensible en los errores.
+- **FR-034**: Los scripts de terceros (Calendly) DEBEN cargarse de forma diferida y acotada por CSP;
+  todo enlace externo con `rel="noopener noreferrer"`. Las dependencias se mantienen actualizadas.
+
+**Rendimiento y estados de carga**
+
+- **FR-035**: El sitio DEBE priorizar la velocidad: renderizado estático (SSG) por defecto,
+  división de código, diferido de lo no crítico e hidratación mínima. Los objetivos medibles están
+  en Success Criteria (SC-005).
+- **FR-036**: Toda operación asíncrona o contenido que tarde en aparecer (envío del formulario,
+  apertura de la agenda, transición de ruta, carga diferida de una sección o imagen) DEBE mostrar un
+  estado de carga (skeleton o indicador), nunca UI en blanco o congelada. Las rutas DEBEN tener UI de
+  carga a nivel de segmento.
+
 ### Key Entities *(include if feature involves data)*
 
 - **Perfil (Autor)**: Juan Camilo Codina Ariza. Atributos: nombre, título/seniority, bio (ES/EN),
@@ -301,6 +326,10 @@ contenido y conversión.
   CTAs).
 - **SC-010**: Añadir un proyecto o un paquete de servicio se realiza editando contenido/datos, sin
   modificar componentes.
+- **SC-011**: Cero secretos expuestos en el bundle del cliente; todas las páginas responden con CSP
+  y cabeceras de seguridad presentes (verificable con un escaneo de cabeceras).
+- **SC-012**: Toda acción asíncrona muestra un estado de carga en menos de 100 ms; nunca hay
+  pantalla en blanco ni interfaz congelada mientras algo carga.
 
 ## Assumptions
 
@@ -308,6 +337,11 @@ contenido y conversión.
   Tailwind + shadcn/ui en Vercel; `next-themes` para temas; GSAP + ScrollTrigger para motion; hero
   3D con CSS 3D transforms; formulario con función serverless + email transaccional; agenda vía
   Calendly (o equivalente).
+- **Sin base de datos**: el contenido son archivos versionados (datos + MDX) y el sitio es estático
+  (SSG). El anti-spam del formulario es **sin estado** (honeypot + time-trap), con firewall/BotID de
+  Vercel como refuerzo opcional; no se usa Redis/base de datos externa.
+- **Seguridad**: CSP + cabeceras de seguridad en producción; secretos solo en variables de entorno
+  del servidor; el propio portafolio es también un caso de estudio en la sección de Proyectos.
 - **Arquitectura híbrida**: home one-pager + páginas indexables de servicios/proyectos/perfil;
   blog en fase 2 con la arquitectura preparada.
 - **Precios**: los servicios se presentan por paquetes con nombre pero SIN precios visibles; la

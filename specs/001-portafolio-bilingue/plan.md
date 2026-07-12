@@ -13,7 +13,7 @@ Portafolio web bilingüe (ES/EN) de Juan Camilo Codina Ariza con doble audiencia
 **datos `.ts`+zod + MDX** (`content/{es,en}`), motion con **GSAP 3.13** (`useGSAP`, ScrollTrigger,
 SplitText, `matchMedia`) y hero 3D en **CSS 3D transforms** (sin R3F). SEO/GEO de primer nivel
 (Metadata API, `sitemap`/`robots`/`llms.txt`, JSON-LD `@graph` con `sameAs`). Contacto multicanal:
-**Server Action + Resend** con anti-spam en capas (honeypot → time-trap → `@upstash/ratelimit`),
+**Server Action + Resend** con anti-spam **sin estado** (honeypot + time-trap; sin Redis),
 **Calendly** en popup diferido, WhatsApp, email y LinkedIn. Arquitectura **híbrida**: home one-pager
 premium + páginas indexables `/servicios/[familia]`, `/proyectos/[slug]`, `/perfil`. Despliegue en
 Vercel. Detalle y justificación en [research.md](./research.md).
@@ -24,12 +24,14 @@ Vercel. Detalle y justificación en [research.md](./research.md).
 
 **Primary Dependencies**: Next.js 16 (App Router, Turbopack) · `next-intl` v4 · Tailwind CSS v4 ·
 shadcn/ui (Radix) · `next-themes` · GSAP 3.13 + `@gsap/react` (ScrollTrigger, SplitText) · `zod` ·
-`react-hook-form` + `@hookform/resolvers` · `resend` (+ React Email opcional) · `@upstash/ratelimit`
-+ `@upstash/redis` · `geist` + `next/font/local` (Clash Display) · `@next/mdx` + `gray-matter` ·
-`react-calendly` · `schema-dts` (tipos JSON-LD).
+`react-hook-form` + `@hookform/resolvers` · `resend` (+ React Email opcional) · `geist` +
+`next/font/local` (Clash Display) · `@next/mdx` + `gray-matter` · `react-calendly` · `schema-dts`
+(tipos JSON-LD). **Sin dependencias con estado**: el anti-spam es honeypot + time-trap (sin Redis);
+el firewall/BotID de Vercel queda como refuerzo opcional de plataforma.
 
-**Storage**: Sin base de datos. Contenido como archivos versionados: datos `.ts`/zod y MDX en
-`content/{es,en}/…`. Rate limiting en Upstash Redis (solo contador anti-abuso, efímero).
+**Storage**: **Sin base de datos.** Contenido como archivos versionados: datos `.ts`/zod y MDX en
+`content/{es,en}/…`; el sitio es estático (SSG). El formulario no persiste nada (envía email vía
+Resend). Anti-spam **sin estado** (honeypot + time-trap); no hay Redis ni almacén externo.
 
 **Testing**: Vitest (unit: esquemas zod, utilidades, `lib/contact`) · Playwright (E2E + visual
 regression en 320/768/1024/1440, ambos temas) · `@axe-core/playwright` (accesibilidad) · Lighthouse
@@ -48,7 +50,11 @@ CI (Core Web Vitals) · `scripts/check-content.ts` (validación de contenido + p
 **Constraints**: WCAG 2.2 AA en **ambos** temas (acento cobre solo decorativo; texto con variantes
 AA `#8A5A34`/`#E3B98C`); animar solo `transform`/`opacity`/`clip-path` (blur descartado del reveal);
 respetar `prefers-reduced-motion`; sin secretos hardcodeados; sin texto hardcodeado (todo por
-recursos de idioma); archivos < 800 líneas, funciones < 50.
+recursos de idioma); archivos < 800 líneas, funciones < 50. **Seguridad**: CSP + cabeceras
+(HSTS, `X-Content-Type-Options`, framing, `Referrer-Policy`, `Permissions-Policy`), CSP permite solo
+los orígenes de Calendly. **Carga**: toda operación async muestra loading/skeleton (SC-012); rutas
+con `loading.tsx` a nivel de segmento. **Rendimiento primero**: SSG por defecto, code-splitting,
+diferido de lo no crítico.
 
 **Scale/Scope**: 2 locales (ES/EN) · ~6 tipos de ruta (home, perfil, servicios índice + 4 familias,
 proyectos índice + 3 casos, contacto) → ~15-20 URLs indexables · 3 proyectos reales v1 · 4 familias
@@ -77,8 +83,11 @@ re-checarse tras Fase 1.*
   para contenido `published`. Aceptado y documentado.
 - *`blur` en reveals*: fuera del allowlist de la constitución → se **omite** (reveal = opacity + y).
   Si se deseara profundidad, se usaría `clip-path`/máscara.
-- *Terceros con JS (Calendly, Upstash)*: se cargan diferidos / server-only para no tocar CWV ni
-  filtrar secretos; CSP debe permitir los orígenes de Calendly.
+- *Terceros con JS (Calendly)*: se cargan diferidos para no tocar CWV; CSP debe permitir sus
+  orígenes. No se usa Redis/Upstash (anti-spam sin estado).
+- *Seguridad y carga (añadido)*: CSP + cabeceras de seguridad site-wide; toda operación async con
+  loading/skeleton y `loading.tsx` por segmento. Cubren FR-031..FR-036 y SC-011/SC-012; refuerzan
+  los Principios I (visibilidad/entrega) y IV (rendimiento) sin violar ninguno.
 
 ## Project Structure
 
@@ -116,12 +125,15 @@ app/
 │   │   └── [slug]/page.tsx     # detalle (CreativeWork) — MDX
 │   ├── contacto/page.tsx       # formulario + canales
 │   ├── opengraph-image.tsx     # OG dinámico (ImageResponse)
+│   ├── loading.tsx             # UI de carga por segmento (Suspense/skeleton)
 │   └── ...                     # not-found, error boundaries
 ├── api/contact/route.ts        # SOLO si se necesita endpoint HTTP público (variante)
 ├── actions/contact.ts          # Server Action (wrapper de lib/contact)
 ├── sitemap.ts · robots.ts      # con alternates/hreflang
 ├── fonts.ts                    # Geist + Geist Mono + Clash Display (next/font)
 └── globals.css                 # Tailwind v4 @theme inline + tokens 3 capas
+
+# next.config.ts → cabeceras de seguridad + CSP (permite orígenes de Calendly)
 
 components/
 ├── hero/ (Hero, ShapesLayer, NameSplit)

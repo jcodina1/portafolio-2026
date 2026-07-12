@@ -59,11 +59,19 @@ Deriva de [design-system.md](../design-system.md) y del skill rector anti-slop. 
       PYME); sin CTAs duplicados de la misma intención.
 - [ ] Cada paquete de servicio: problema → qué recibes → resultado → CTA.
 
-## Rendimiento (CWV)
+## Rendimiento y carga (CWV)
 
 - [ ] LCP < 2.5s (el nombre pinta de inmediato), INP < 200ms, CLS < 0.1.
 - [ ] JS de home < 150 KB gz; GSAP y terceros (Calendly) diferidos.
 - [ ] Solo se anima `transform`/`opacity`/`clip-path`.
+- [ ] Toda operación async (envío, Calendly, transición de ruta, contenido diferido) muestra
+      loading/skeleton en < 100 ms; nunca UI en blanco o congelada; `loading.tsx` por segmento.
+
+## Seguridad
+
+- [ ] CSP + cabeceras de seguridad presentes; CSP permite solo los orígenes de Calendly.
+- [ ] Cero secretos en el bundle cliente (solo `NEXT_PUBLIC_*` no sensibles).
+- [ ] Enlaces externos con `rel="noopener noreferrer"`; anti-spam sin estado (honeypot + time-trap).
 
 ## Notas
 

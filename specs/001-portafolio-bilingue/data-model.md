@@ -55,7 +55,9 @@ Caso de trabajo (narrativa en MDX + front-matter tipado). v1: 3 casos reales.
 | `order` | number | orden de aparición |
 
 **Estados**: `coming-soon` se muestra atenuado y sin enlace de detalle roto. **Casos v1**:
-`windmar-plataforma` (company), `simulacion-financiera` (personal/freelance), `web-2-0` (company).
+`windmar-plataforma` (company), `simulacion-financiera` (personal/freelance), `web-2-0` (company) y
+`este-portafolio` (personal; el propio sitio como demostración meta: Next.js 16, i18n, GSAP,
+SEO/GEO, Spec Kit).
 
 ### 3. Familia de servicio — `content/{locale}/servicios/<familia>.ts`
 Agrupación comercial con página indexable propia (`/servicios/[familia]`).

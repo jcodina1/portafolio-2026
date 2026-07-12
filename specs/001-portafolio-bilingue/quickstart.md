@@ -10,14 +10,15 @@ saldrán en `tasks.md` (`/speckit-tasks`).
 ## Prerrequisitos
 
 - Node 20+ y pnpm (o npm).
-- Cuentas/servicios: Resend (dominio verificado), Upstash Redis, Calendly. Todas vía variables de
-  entorno (ver [contracts/contact.md](./contracts/contact.md)); ninguna clave en el código.
+- Cuentas/servicios: Resend (dominio verificado) y Calendly. Vía variables de entorno (ver
+  [contracts/contact.md](./contracts/contact.md)); ninguna clave en el código. Sin base de datos ni
+  Redis (anti-spam sin estado).
 
 ## Puesta en marcha
 
 ```bash
 pnpm install
-cp .env.example .env.local     # rellenar RESEND_*, UPSTASH_*, NEXT_PUBLIC_* (Calendly/WhatsApp/…)
+cp .env.example .env.local     # rellenar RESEND_*, NEXT_PUBLIC_* (Calendly/WhatsApp/email/LinkedIn)
 pnpm dev                       # desarrollo en http://localhost:3000/es
 ```
 

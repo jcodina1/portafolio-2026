@@ -28,9 +28,9 @@ re-valida con `safeParse`. `company` y `startedAt` se leen aparte (no en el sche
 
 1. **Honeypot**: si `company` no vacío → responder `{ ok: true }` (éxito falso, no revelar).
 2. **Time-trap**: si `Date.now() - startedAt < 3000ms` → `{ ok: true }` (éxito falso).
-3. **Rate limit** por IP (`@upstash/ratelimit`, sliding window **5 / 10 min**; IP = primer
-   `x-forwarded-for`). Si excede → `{ ok: false, message }` con código 429-equivalente. Fail-open +
-   log si Redis no responde.
+3. **Rate limit (opcional, a nivel de plataforma)**: Vercel Firewall/BotID (sin código ni estado en
+   la app). No se usa Redis/Upstash. Las capas 1 y 2 (honeypot + time-trap) son las defensas por
+   defecto, sin estado y sin fricción.
 4. **Validación** `safeParse` → si falla, `{ ok: false, errors: { campo: mensaje } }`.
 5. **Envío** con Resend: `from` = dominio verificado, `replyTo` = email del visitante, asunto
    `[{tipo}] Nuevo contacto de {nombre}`. Opcional: autorespuesta al visitante.
@@ -54,10 +54,9 @@ type ContactState =
 
 ## Variables de entorno (server-only salvo `NEXT_PUBLIC_*`)
 
-`RESEND_API_KEY`, `CONTACT_FROM_EMAIL` (dominio verificado SPF/DKIM/DMARC), `CONTACT_TO_EMAIL`,
-`UPSTASH_REDIS_REST_URL`, `UPSTASH_REDIS_REST_TOKEN`, (opcional) `TURNSTILE_SECRET_KEY` +
-`NEXT_PUBLIC_TURNSTILE_SITE_KEY`; públicas: `NEXT_PUBLIC_CALENDLY_URL`, `NEXT_PUBLIC_WHATSAPP_NUMBER`,
-`NEXT_PUBLIC_CONTACT_EMAIL`, `NEXT_PUBLIC_LINKEDIN_URL`.
+`RESEND_API_KEY`, `CONTACT_FROM_EMAIL` (dominio verificado SPF/DKIM/DMARC), `CONTACT_TO_EMAIL`;
+públicas: `NEXT_PUBLIC_CALENDLY_URL`, `NEXT_PUBLIC_WHATSAPP_NUMBER`, `NEXT_PUBLIC_CONTACT_EMAIL`,
+`NEXT_PUBLIC_LINKEDIN_URL`. (Sin variables de Redis/Upstash: el anti-spam es sin estado.)
 
 ## Canales directos (contrato de enlaces)
 
@@ -74,6 +73,6 @@ type ContactState =
 - Envío válido → llega el email al `CONTACT_TO_EMAIL` con `replyTo` correcto y el visitante ve
   confirmación (cubre SC-003, FR-014/016).
 - Datos inválidos → errores por campo, sin envío, sin perder lo escrito (FR-015).
-- Honeypot lleno o envío < 3s → tratado como éxito silencioso, sin email enviado (FR-017).
-- > 5 envíos/10 min por IP → bloqueado con mensaje accionable (FR-017).
+- Honeypot lleno o envío < 3s → tratado como éxito silencioso, sin email enviado (FR-017, FR-033).
+- Abuso sostenido → mitigado por el firewall/BotID de Vercel (plataforma), sin estado en la app.
 - Sin secretos en el bundle cliente (solo `NEXT_PUBLIC_*`).

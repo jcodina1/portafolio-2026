@@ -238,9 +238,11 @@ Formato por tema: Decisión / Por qué / Alternativas descartadas / Gotchas clav
   `tipo` (enum empleo/servicio/otro) segmenta el lead.
 
 ### 4.4 Anti-spam sin fricción
-- **Decisión**: capas invisibles — **honeypot → time-trap (<3s) → rate limit por IP
-  (`@upstash/ratelimit`, 5/10min)**. **Turnstile** solo si, medido, sigue entrando spam
-  (alternativas nativas: Vercel WAF / BotID).
+- **Decisión**: capas invisibles — **honeypot → time-trap (<3s)**. **Nota de proyecto (2026-07-11)**:
+  se DESCARTA `@upstash/ratelimit` para no introducir una dependencia con estado (el usuario quiere
+  cero "base de datos" y máxima simplicidad). El rate limiting, si hace falta, se hace a nivel de
+  **plataforma con Vercel Firewall/BotID** (sin código ni estado en la app). **Turnstile** solo si,
+  medido, sigue entrando spam.
 - **Gotchas**: honeypot oculto también para AT (`sr-only`, `tabIndex=-1`, `aria-hidden`, nombre que
   el autofill no rellene como `company`). Honeypot lleno → **fingir éxito**. IP = primer valor de
   `x-forwarded-for`. Fail-open + log si Redis cae.
@@ -280,7 +282,7 @@ Formato por tema: Decisión / Por qué / Alternativas descartadas / Gotchas clav
 | Tokens/tema | 3 capas + `@theme inline`; acento cobre decorativo, texto AA por tema; `next-themes` sin flash |
 | Email | Resend (`replyTo` visitante), Server Action con lógica en `lib/contact.ts` |
 | Validación | zod compartido + RHF + shadcn Form; servidor re-valida |
-| Anti-spam | honeypot → time-trap → `@upstash/ratelimit` (5/10min); Turnstile solo si hace falta |
+| Anti-spam | honeypot + time-trap (sin estado); rate limit opcional vía Vercel Firewall/BotID; Turnstile solo si hace falta |
 | Calendly | popup diferido por botón + enlace fallback |
 | Canales | `wa.me` (dígitos), `tel:` E.164, `mailto:` corto, `rel=noopener noreferrer` |
 
