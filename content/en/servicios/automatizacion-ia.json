@@ -47,5 +47,8 @@
       "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
     }
   ],
-  "faq": []
+  "faq": [
+    { "q": "Which tools do you automate with?", "a": "Mainly n8n for the flows, plus integrations with your CRM, payments and the APIs you already use." },
+    { "q": "Does the AI assistant use my data?", "a": "Yes. It connects to your real information (RAG) and answers with it, not generic replies." }
+  ]
 }

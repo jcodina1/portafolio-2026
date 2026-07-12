@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { getServiceFamilies, getServiceFamily } from "@/lib/content/services";
 import { FamilyView } from "@/components/services/FamilyView";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -65,10 +65,38 @@ export default async function FamilyPage({
     },
   };
 
+  const t = await getTranslations("services");
+  const faqLd =
+    family.faq.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: family.faq.map((f) => ({
+            "@type": "Question",
+            name: f.q,
+            acceptedAnswer: { "@type": "Answer", text: f.a },
+          })),
+        }
+      : null;
+
   return (
     <div className="mx-auto max-w-[1400px] px-6 py-16 md:px-8 md:py-24">
       <JsonLd data={serviceLd} />
+      {faqLd && <JsonLd data={faqLd} />}
       <FamilyView family={family} />
+      {family.faq.length > 0 && (
+        <section className="mt-16 max-w-[68ch]">
+          <h2 className="font-display text-2xl font-semibold tracking-tight">{t("faqHeading")}</h2>
+          <dl className="mt-6 divide-y divide-border border-t border-border">
+            {family.faq.map((f) => (
+              <div key={f.q} className="py-5">
+                <dt className="font-medium">{f.q}</dt>
+                <dd className="mt-1 text-sm text-muted-foreground">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
     </div>
   );
 }

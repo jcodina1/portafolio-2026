@@ -34,5 +34,8 @@
       "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
     }
   ],
-  "faq": []
+  "faq": [
+    { "q": "¿En cuánto tiempo tengo algo funcionando?", "a": "Con el MVP, en unas 6 semanas ya pruebas el flujo principal con clientes reales." },
+    { "q": "¿La plataforma crece con mi negocio?", "a": "Sí, la construyo por fases con una arquitectura escalable y documentada." }
+  ]
 }

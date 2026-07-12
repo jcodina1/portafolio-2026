@@ -34,5 +34,8 @@
       "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
     }
   ],
-  "faq": []
+  "faq": [
+    { "q": "How soon do I have something working?", "a": "With the MVP, in about 6 weeks you already test the core flow with real customers." },
+    { "q": "Does the platform grow with my business?", "a": "Yes, I build it in phases with a scalable, documented architecture." }
+  ]
 }

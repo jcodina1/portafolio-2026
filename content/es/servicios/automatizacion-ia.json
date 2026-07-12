@@ -47,5 +47,8 @@
       "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
     }
   ],
-  "faq": []
+  "faq": [
+    { "q": "¿Con qué herramientas automatizas?", "a": "Sobre todo n8n para los flujos, más integraciones con tu CRM, tus pagos y las APIs que ya uses." },
+    { "q": "¿El asistente de IA usa mis datos?", "a": "Sí. Se conecta a tu información real (RAG) y responde con ella, no con respuestas genéricas." }
+  ]
 }

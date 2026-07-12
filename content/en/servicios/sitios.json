@@ -33,5 +33,8 @@
       "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
     }
   ],
-  "faq": []
+  "faq": [
+    { "q": "Will I be able to update the site myself?", "a": "Yes, the Pro Site includes a content manager so you edit without depending on anyone." },
+    { "q": "Will it show up on Google?", "a": "Yes. I take care of technical SEO and performance (Core Web Vitals) from the start." }
+  ]
 }

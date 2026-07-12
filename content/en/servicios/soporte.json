@@ -33,5 +33,8 @@
       "cta": { "label": "Book your free diagnosis", "href": "/contacto" }
     }
   ],
-  "faq": []
+  "faq": [
+    { "q": "What does support include?", "a": "Bug fixing, small improvements every month and monitoring to get ahead of problems." },
+    { "q": "Do you also maintain the automations?", "a": "Yes, I watch your flows and integrations and adjust them when your tools change." }
+  ]
 }

@@ -183,15 +183,15 @@ US2 Person, US3 CreativeWork); US5 solo completa rutas faltantes y enlaza el gra
 **Independent Test**: metadatos/JSON-LD por tipo; `sitemap.xml`/`robots.txt`/`llms.txt` 200 sin
 redirección; cada familia/proyecto con URL indexable.
 
-- [ ] T071 [US5] `generateMetadata` en rutas restantes (contacto, índices de servicios/proyectos) que no cubrieron las historias (dep T021)
-- [ ] T072 [US5] Consolidar y ENLAZAR el `@graph` con `@id` (`Person` como `provider` de `Service`); no rehacer el JSON-LD de US1/US2/US3 (dep T043, T058, T064)
-- [ ] T073 [US5] Completar `app/sitemap.ts` con todas las rutas reales + alternates (dep T023, T009)
-- [ ] T074 [US5] `robots.ts`: permitir `GPTBot`/`OAI-SearchBot`/`ClaudeBot`/`PerplexityBot`/`Google-Extended` + host + sitemap (dep T024)
-- [ ] T075 [US5] Contenido real de `public/llms.txt` (perfil, servicios, proyectos; priorizar EN) (dep T025, T067)
-- [ ] T076 [US5] OG images por tipo de página (dep T026)
-- [ ] T077 [US5] Consistencia de entidad `sameAs` (mismo nombre/bio/enlaces que LinkedIn/GitHub) (dep T058)
-- [ ] T078 [US5] AEO: H2 en forma de pregunta + `FAQPage` visible donde sea real (servicios) (dep T043)
-- [ ] T079 [US5] E2E/SEO `tests/e2e/us5-seo.spec.ts` (metadata, hreflang, JSON-LD válido, sitemap/robots/llms 200 sin redirección) (dep T071-T075)
+- [x] T071 [US5] `generateMetadata` en rutas restantes (contacto, índices de servicios/proyectos) que no cubrieron las historias (dep T021)
+- [x] T072 [US5] Consolidar y ENLAZAR el `@graph` con `@id` (`Person` como `provider` de `Service`); no rehacer el JSON-LD de US1/US2/US3 (dep T043, T058, T064)
+- [x] T073 [US5] Completar `app/sitemap.ts` con todas las rutas reales + alternates (dep T023, T009)
+- [x] T074 [US5] `robots.ts`: permitir `GPTBot`/`OAI-SearchBot`/`ClaudeBot`/`PerplexityBot`/`Google-Extended` + host + sitemap (dep T024)
+- [x] T075 [US5] Contenido real de `public/llms.txt` (perfil, servicios, proyectos; priorizar EN) (dep T025, T067)
+- [x] T076 [US5] OG images por tipo de página (dep T026)
+- [x] T077 [US5] Consistencia de entidad `sameAs` (mismo nombre/bio/enlaces que LinkedIn/GitHub) (dep T058)
+- [x] T078 [US5] AEO: H2 en forma de pregunta + `FAQPage` visible donde sea real (servicios) (dep T043)
+- [x] T079 [US5] E2E/SEO `tests/e2e/us5-seo.spec.ts` (metadata, hreflang, JSON-LD válido, sitemap/robots/llms 200 sin redirección) (dep T071-T075)
 
 **Checkpoint**: Descubrible y citable; superficie indexable por tema.
 

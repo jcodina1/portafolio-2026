@@ -33,5 +33,8 @@
       "cta": { "label": "Agenda tu diagnóstico gratis", "href": "/contacto" }
     }
   ],
-  "faq": []
+  "faq": [
+    { "q": "¿Qué incluye el soporte?", "a": "Corrección de errores, pequeñas mejoras cada mes y monitoreo para adelantarme a los problemas." },
+    { "q": "¿Mantienes también las automatizaciones?", "a": "Sí, vigilo tus flujos e integraciones y los ajusto cuando cambian tus herramientas." }
+  ]
 }
