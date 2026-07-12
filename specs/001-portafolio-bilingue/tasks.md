@@ -128,13 +128,13 @@ en ≤2 clics; el perfil comunica rol/stack/experiencia/liderazgo.
 - [x] T050 [P] [US2] `components/hero/NameSplit.tsx` (`SplitText` sobre `<h1>`, `aria:"auto"`, `mask:"lines"`, LCP no oculto) (dep T027)
 - [x] T051 [P] [US2] `components/hero/ShapesLayer.tsx` (CSS `preserve-3d`: 2 cubos canto cobre, anillo, orbe; GSAP `rotation` + `quickTo`; pausa offscreen) (dep T027)
 - [x] T052 [US2] `components/hero/Hero.tsx` (eyebrow mono, nombre, subtítulo ≤20 palabras, CTAs "Hablemos"/"Ver proyectos"; `min-h-[100dvh]`) (dep T050, T051)
-- [ ] T053 [P] [US2] `components/home/DualPaths.tsx` (split 50/50 contratan/negocios)
-- [ ] T054 [P] [US2] `components/home/Metrics.tsx` (cifras Geist Mono, contadores animados) (dep T027)
-- [ ] T055 [P] [US2] `components/home/AIBand.tsx` (bloque de color marino-negro, 3 pasos nombrados por su acción)
-- [ ] T056 [US2] Home `app/[locale]/(home)/page.tsx` (Hero + DualPaths + Metrics + AIBand + teasers) (dep T052-T055)
-- [ ] T057 [US2] Perfil `app/[locale]/perfil/page.tsx` (bio, stack, experiencia, métricas, enlaces, CTA contratación) (dep T048, T018)
-- [ ] T058 [US2] JSON-LD `Person` (`@graph`, `sameAs`) en home y perfil (dep T022, T048)
-- [ ] T059 [US2] E2E + axe `tests/e2e/us2-home-perfil.spec.ts` (bifurcación → perfil → contacto ≤2 clics) (dep T056, T057)
+- [x] T053 [P] [US2] `components/home/DualPaths.tsx` (split 50/50 contratan/negocios)
+- [x] T054 [P] [US2] `components/home/Metrics.tsx` (cifras Geist Mono, contadores animados) (dep T027)
+- [x] T055 [P] [US2] `components/home/AIBand.tsx` (bloque de color marino-negro, 3 pasos nombrados por su acción)
+- [x] T056 [US2] Home `app/[locale]/(home)/page.tsx` (Hero + DualPaths + Metrics + AIBand + teasers) (dep T052-T055)
+- [x] T057 [US2] Perfil `app/[locale]/perfil/page.tsx` (bio, stack, experiencia, métricas, enlaces, CTA contratación) (dep T048, T018)
+- [x] T058 [US2] JSON-LD `Person` (`@graph`, `sameAs`) en home y perfil (dep T022, T048)
+- [x] T059 [US2] E2E + axe `tests/e2e/us2-home-perfil.spec.ts` (bifurcación → perfil → contacto ≤2 clics) (dep T056, T057)
 
 **Checkpoint**: US1 + US2 independientes (MVP dual completo).
 

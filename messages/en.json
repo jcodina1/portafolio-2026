@@ -29,7 +29,27 @@
     "comingSoon": "Coming soon"
   },
   "home": {
-    "wip": "Site under construction."
+    "dualHiringKicker": "For teams that hire",
+    "dualHiringTitle": "Senior Fullstack and Lead",
+    "dualHiringBody": "React, Next.js and TypeScript end to end, leading architecture and team, shipping to production.",
+    "dualHiringCta": "View my profile",
+    "dualBusinessKicker": "For businesses that need a solution",
+    "dualBusinessTitle": "Custom solutions",
+    "dualBusinessBody": "Management platforms, data integration and AI automation for SMEs that need results, not promises.",
+    "dualBusinessCta": "View solutions",
+    "aiKicker": "How I work with AI",
+    "aiTitle": "AI is part of how I deliver, not decoration.",
+    "aiStep1Title": "AI-assisted development",
+    "aiStep1Body": "I use Claude Code to build faster and with more quality.",
+    "aiStep2Title": "Workflow automation",
+    "aiStep2Body": "I connect your tools with n8n and remove manual work.",
+    "aiStep3Title": "LLM integration",
+    "aiStep3Body": "Chatbots and RAG with your real business data."
+  },
+  "profile": {
+    "skills": "Skills",
+    "experience": "Experience",
+    "contactCta": "Let's talk about working together"
   },
   "hero": {
     "available": "Available for projects",
