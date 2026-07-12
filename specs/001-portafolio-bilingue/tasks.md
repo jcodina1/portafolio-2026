@@ -123,11 +123,11 @@ perfil con prueba y CTA de contratación.
 **Independent Test**: entrar por la home, seguir "para equipos que contratan" al perfil y a contacto
 en ≤2 clics; el perfil comunica rol/stack/experiencia/liderazgo.
 
-- [ ] T048 [P] [US2] Perfil ES `content/es/perfil.ts` (bio, título, stack, experiencia, métricas, enlaces del CV)
-- [ ] T049 [P] [US2] Stub EN `content/en/perfil.ts` (TODO traducir)
-- [ ] T050 [P] [US2] `components/hero/NameSplit.tsx` (`SplitText` sobre `<h1>`, `aria:"auto"`, `mask:"lines"`, LCP no oculto) (dep T027)
-- [ ] T051 [P] [US2] `components/hero/ShapesLayer.tsx` (CSS `preserve-3d`: 2 cubos canto cobre, anillo, orbe; GSAP `rotation` + `quickTo`; pausa offscreen) (dep T027)
-- [ ] T052 [US2] `components/hero/Hero.tsx` (eyebrow mono, nombre, subtítulo ≤20 palabras, CTAs "Hablemos"/"Ver proyectos"; `min-h-[100dvh]`) (dep T050, T051)
+- [x] T048 [P] [US2] Perfil ES `content/es/perfil.ts` (bio, título, stack, experiencia, métricas, enlaces del CV)
+- [x] T049 [P] [US2] Stub EN `content/en/perfil.ts` (TODO traducir)
+- [x] T050 [P] [US2] `components/hero/NameSplit.tsx` (`SplitText` sobre `<h1>`, `aria:"auto"`, `mask:"lines"`, LCP no oculto) (dep T027)
+- [x] T051 [P] [US2] `components/hero/ShapesLayer.tsx` (CSS `preserve-3d`: 2 cubos canto cobre, anillo, orbe; GSAP `rotation` + `quickTo`; pausa offscreen) (dep T027)
+- [x] T052 [US2] `components/hero/Hero.tsx` (eyebrow mono, nombre, subtítulo ≤20 palabras, CTAs "Hablemos"/"Ver proyectos"; `min-h-[100dvh]`) (dep T050, T051)
 - [ ] T053 [P] [US2] `components/home/DualPaths.tsx` (split 50/50 contratan/negocios)
 - [ ] T054 [P] [US2] `components/home/Metrics.tsx` (cifras Geist Mono, contadores animados) (dep T027)
 - [ ] T055 [P] [US2] `components/home/AIBand.tsx` (bloque de color marino-negro, 3 pasos nombrados por su acción)

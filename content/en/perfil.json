@@ -1,0 +1,70 @@
+{
+  "name": "Juan Camilo Codina Ariza",
+  "title": "Senior Frontend/Fullstack Developer and Development Lead",
+  "location": "Bogotá, Colombia",
+  "bioShort": "Senior Frontend/Fullstack developer with 4+ years building modern web apps and scalable platforms. I lead teams and use AI as a real lever for speed and quality.",
+  "bioLong": "Senior Frontend/Fullstack developer with more than 4 years of experience building modern web applications and scalable platforms in agile environments. Specialized in TypeScript, React and Next.js (SSR, SSG and ISR), with robust architectures focused on user experience. Proven experience leading teams, integrating payment gateways, collaborating with UX/UI teams and optimizing SEO and performance on high-traffic applications.",
+  "photo": {
+    "src": "https://picsum.photos/seed/juan-codina/480/600",
+    "alt": "Portrait of Juan Camilo Codina Ariza"
+  },
+  "skills": [
+    "TypeScript",
+    "JavaScript",
+    "React",
+    "Next.js (SSR/SSG/ISR)",
+    "Astro",
+    "Node.js",
+    "Express",
+    "REST APIs",
+    "PostgreSQL",
+    "MySQL",
+    "Tailwind CSS",
+    "React Query",
+    "React Hook Form",
+    "n8n",
+    "Claude Code",
+    "Zoho CRM",
+    "Figma",
+    "Git",
+    "Scrum"
+  ],
+  "experience": [
+    {
+      "company": "WindMar Home",
+      "role": "Senior Fullstack Engineer / Development Lead",
+      "period": "Jan 2024 – Present",
+      "summary": "Promoted to Development Lead, mentoring a team of up to 3 people. Led the architecture of a commercial and financial quoting ecosystem (Roofing, Water, Solar/PPA), the Website 2.0 with Next.js (SSR/SSG), payment gateway integration and data sync to Zoho CRM via REST APIs."
+    },
+    {
+      "company": "Trabajo en Digital",
+      "role": "Frontend Developer",
+      "period": "Mar 2023 – Jan 2024",
+      "summary": "Pixel-perfect interfaces from Figma in a remote, distributed team. SEO and Core Web Vitals optimization with TypeScript, React Query and Tailwind; accessible forms (WCAG) with React Hook Form."
+    },
+    {
+      "company": "Engineering for the Management and Environmental Soil S.A.S.",
+      "role": "Fullstack Developer (Freelance)",
+      "period": "Aug 2023 – Dec 2023",
+      "summary": "Urban-financial simulation web platform: municipality classification, interactive map viewer, geographic data API and cost simulations documented end to end."
+    },
+    {
+      "company": "Ingenian Software",
+      "role": "Developer Engineer",
+      "period": "Sep 2022 – Jan 2023",
+      "summary": "IVR systems with Avaya Orchestration Designer and backend services with Spring Boot, tracking tickets in Jira under an agile approach."
+    }
+  ],
+  "metrics": [
+    { "label": "years of experience", "value": "4", "suffix": "+" },
+    { "label": "developers mentored", "value": "3" },
+    { "label": "platforms in production", "value": "5", "suffix": "+" },
+    { "label": "companies and teams", "value": "4" }
+  ],
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/jcodina1",
+    "email": "jcodina1997@gmail.com",
+    "whatsapp": "573041368147",
+    "calendly": "https://calendly.com/jcodina1997/30min"
+  }
+}

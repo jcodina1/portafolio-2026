@@ -31,6 +31,11 @@
   "home": {
     "wip": "Sitio en construcción."
   },
+  "hero": {
+    "available": "Disponible para proyectos",
+    "eyebrow": "Senior Fullstack · Líder de desarrollo · Bogotá",
+    "subtitle": "Construyo productos web de principio a fin: plataformas, APIs e integraciones, herramientas internas y sitios rápidos, con IA de por medio."
+  },
   "services": {
     "title": "Servicios",
     "intro": "Construyo productos web de principio a fin y automatizo lo repetitivo con IA. Elige por dónde empezar o agenda un diagnóstico gratis.",

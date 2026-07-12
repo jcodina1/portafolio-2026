@@ -31,6 +31,11 @@
   "home": {
     "wip": "Site under construction."
   },
+  "hero": {
+    "available": "Available for projects",
+    "eyebrow": "Senior Fullstack · Development Lead · Bogotá",
+    "subtitle": "I build web products end to end: platforms, APIs and integrations, internal tools and fast sites, with AI in the loop."
+  },
   "services": {
     "title": "Services",
     "intro": "I build web products end to end and automate the repetitive work with AI. Pick where to start or book a free diagnosis.",
