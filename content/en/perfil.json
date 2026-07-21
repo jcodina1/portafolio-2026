@@ -5,7 +5,7 @@
   "bioShort": "Senior Frontend/Fullstack developer with 4+ years building modern web apps and scalable platforms. I lead teams and use AI as a real lever for speed and quality.",
   "bioLong": "Senior Frontend/Fullstack developer with more than 4 years of experience building modern web applications and scalable platforms in agile environments. Specialized in TypeScript, React and Next.js (SSR, SSG and ISR), with robust architectures focused on user experience. Proven experience leading teams, integrating payment gateways, collaborating with UX/UI teams and optimizing SEO and performance on high-traffic applications.",
   "photo": {
-    "src": "https://picsum.photos/seed/juan-codina/480/600",
+    "src": "/images/juan-codina.png",
     "alt": "Portrait of Juan Camilo Codina Ariza"
   },
   "skills": [

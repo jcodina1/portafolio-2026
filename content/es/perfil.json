@@ -5,7 +5,7 @@
   "bioShort": "Desarrollador Frontend/Fullstack Senior con más de 4 años construyendo aplicaciones web modernas y plataformas escalables. Lidero equipos y uso IA como palanca real de velocidad y calidad.",
   "bioLong": "Desarrollador Frontend/Fullstack Senior con más de 4 años de experiencia construyendo aplicaciones web modernas y plataformas escalables en entornos ágiles. Especializado en TypeScript, React y Next.js (SSR, SSG e ISR), con arquitecturas robustas orientadas a la experiencia de usuario. Experiencia liderando equipos, integrando pasarelas de pago, colaborando con equipos UX/UI y optimizando SEO y rendimiento en aplicaciones de alto tráfico.",
   "photo": {
-    "src": "https://picsum.photos/seed/juan-codina/480/600",
+    "src": "/images/juan-codina.png",
     "alt": "Retrato de Juan Camilo Codina Ariza"
   },
   "skills": [
