@@ -7,9 +7,13 @@ const withMDX = createMDX({});
 
 // Cabeceras de seguridad (FR-031). CSP funcional que permite solo los orígenes
 // de terceros usados (Calendly). El endurecimiento por nonce se aborda en T097/T098.
+// React en desarrollo usa eval() para herramientas de depuración; se permite
+// 'unsafe-eval' SOLO en dev. En producción la CSP se mantiene estricta.
+const isDev = process.env.NODE_ENV !== "production";
+
 const contentSecurityPolicy = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://assets.calendly.com",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://assets.calendly.com`,
   "style-src 'self' 'unsafe-inline' https://assets.calendly.com",
   "img-src 'self' data: blob: https://picsum.photos https://fastly.picsum.photos",
   "font-src 'self' data:",
